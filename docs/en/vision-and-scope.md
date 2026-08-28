@@ -1,6 +1,6 @@
-# Vision and Scope — Draft
+# Vision and Scope
 
-> Canonical version for grading: [`docs/pt-BR/vision-and-scope.md`](../pt-BR/vision-and-scope.md). Initial draft to guide the backlog. Should be reviewed/expanded to become the formal "vision and scope document" required for delivery.
+*(Assignment artifact 2: "vision and scope document". Canonical version for grading: [`docs/pt-BR/vision-and-scope.md`](../pt-BR/vision-and-scope.md).)*
 
 ## Problem
 

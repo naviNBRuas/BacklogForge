@@ -1,6 +1,6 @@
-# Visão e Escopo (Vision and Scope) — Rascunho
+# Visão e Escopo (Vision and Scope)
 
-> Rascunho inicial para orientar o backlog. Deve ser revisado/expandido para virar o artefato formal "Documento de visão e escopo" exigido na entrega.
+*(Artefato 2 do trabalho prático: "documento de visão e escopo".)*
 
 ## Problema
 
