@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}{{ 'Edit Criterion' if criterion else 'New Criterion' }}{% endblock %}
+{% block content %}
+<h1>{{ 'Edit Criterion' if criterion else 'New Criterion' }}</h1>
+<form method="post">
+  {{ form.hidden_tag() }}
+  <div class="field">{{ form.given_text.label }} {{ form.given_text() }}</div>
+  <div class="field">{{ form.when_text.label }} {{ form.when_text() }}</div>
+  <div class="field">{{ form.then_text.label }} {{ form.then_text() }}</div>
+  <button type="submit">Save</button>
+</form>
+{% endblock %}

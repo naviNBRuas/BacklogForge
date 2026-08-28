@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}{{ 'Edit Epic' if epic else 'New Epic' }}{% endblock %}
+{% block content %}
+<h1>{{ 'Edit Epic' if epic else 'New Epic' }}</h1>
+<form method="post">
+  {{ form.hidden_tag() }}
+  <div class="field">{{ form.name.label }} {{ form.name() }}</div>
+  <div class="field">{{ form.description.label }} {{ form.description() }}</div>
+  <button type="submit">Save</button>
+</form>
+{% endblock %}

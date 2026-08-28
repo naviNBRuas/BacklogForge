@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}{{ sprint.name }}{% endblock %}
+{% block content %}
+<p><a href="{{ url_for('projects.detail', project_id=project.id) }}">&larr; {{ project.name }}</a></p>
+<h1>{{ sprint.name }}</h1>
+<p>{{ sprint.start_date or '' }} – {{ sprint.end_date or '' }}</p>
+<p>
+  <a href="{{ url_for('backlogs.edit_sprint', project_id=project.id, sprint_id=sprint.id) }}">Edit</a>
+  <form class="inline" method="post" action="{{ url_for('backlogs.delete_sprint', project_id=project.id, sprint_id=sprint.id) }}"
+        onsubmit="return confirm('Delete this sprint? Stories return to the Product Backlog.');">
+    <button type="submit">Delete</button>
+  </form>
+</p>
+
+{% if sprint.stories %}
+<table>
+  <tr><th>Story</th><th>Points</th><th>MoSCoW</th><th>RICE</th></tr>
+  {% for story in sprint.stories %}
+  <tr>
+    <td><a href="{{ url_for('stories.detail', project_id=project.id, story_id=story.id) }}">As a {{ story.role_text }}, I want {{ story.action_text }}</a></td>
+    <td>{{ story.story_points if story.story_points is not none else '—' }}</td>
+    <td>{{ story.moscow or '—' }}</td>
+    <td>{{ '%.1f'|format(story.rice_score) if story.rice_score is not none else '—' }}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% else %}
+<p>No stories in this sprint yet — move some in from the Product Backlog.</p>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Product Backlog{% endblock %}
+{% block content %}
+<p><a href="{{ url_for('projects.detail', project_id=project.id) }}">&larr; {{ project.name }}</a></p>
+<h1>Product Backlog</h1>
+<p><a href="{{ url_for('stories.create', project_id=project.id) }}">+ New Story</a></p>
+
+{% if backlog.stories %}
+<table>
+  <tr><th>Story</th><th>Points</th><th>MoSCoW</th><th>RICE</th></tr>
+  {% for story in backlog.stories %}
+  <tr>
+    <td><a href="{{ url_for('stories.detail', project_id=project.id, story_id=story.id) }}">As a {{ story.role_text }}, I want {{ story.action_text }}</a></td>
+    <td>{{ story.story_points if story.story_points is not none else '—' }}</td>
+    <td>{{ story.moscow or '—' }}</td>
+    <td>{{ '%.1f'|format(story.rice_score) if story.rice_score is not none else '—' }}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% else %}
+<p>No stories yet.</p>
+{% endif %}
+
+<h2>Notes</h2>
+<form method="post">
+  {{ form.hidden_tag() }}
+  {{ form.notes() }}
+  <button type="submit">Save notes</button>
+</form>
+{% endblock %}

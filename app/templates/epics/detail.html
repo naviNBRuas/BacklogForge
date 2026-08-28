@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}{{ epic.name }}{% endblock %}
+{% block content %}
+<p><a href="{{ url_for('epics.index', project_id=project.id) }}">&larr; Epics</a></p>
+<h1>{{ epic.name }}</h1>
+<p>{{ epic.description }}</p>
+<p>
+  <a href="{{ url_for('epics.edit', project_id=project.id, epic_id=epic.id) }}">Edit</a>
+  <form class="inline" method="post" action="{{ url_for('epics.delete', project_id=project.id, epic_id=epic.id) }}"
+        onsubmit="return confirm('Delete this epic? Linked stories will just be unlinked.');">
+    <button type="submit">Delete</button>
+  </form>
+</p>
+<h2>Stories</h2>
+<ul>
+  {% for story in epic.stories %}
+  <li><a href="{{ url_for('stories.detail', project_id=project.id, story_id=story.id) }}">As a {{ story.role_text }}, I want {{ story.action_text }}</a></li>
+  {% endfor %}
+</ul>
+{% endblock %}

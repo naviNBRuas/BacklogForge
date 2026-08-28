@@ -35,17 +35,17 @@ Cada cartão registra: **Nome**, **Descrição**, **Responsável** (sempre o aut
 | Architecture notebook | Descrição da arquitetura (objetivos, suposições, dependências, decisões, mecanismos, abstrações, impacto de Flask/SQLAlchemy/Jinja2) | autor | Alta | M | Concluído | 2026-08-27 | 2026-08-28 |
 | Projeto físico de banco de dados | Diagrama + descrição de tabelas/colunas/chaves/relacionamentos | autor | Alta | M | Concluído | 2026-08-27 | 2026-08-28 |
 | Projeto de interface (storyboards + wireframes) | Um storyboard por cenário-chave de uso; wireframes simples por tela | autor | Média | M | Concluído | 2026-08-27 | 2026-08-28 |
-| Setup do projeto Flask | Estrutura de pastas, dependências, banco SQLite inicial, autenticação básica | autor | Alta | M | Em Progresso | 2026-08-27 | — |
-| Implementação — Épico 1: Autenticação (US-01 a US-04) | Conta, login, restrição de acesso, logout | autor | Alta | M | Backlog | 2026-08-28 | — |
-| Implementação — Épico 2: Projetos (US-05 a US-08) | CRUD de Projetos | autor | Alta | M | Backlog | 2026-08-28 | — |
-| Implementação — Épico 3: Product Backlog (US-09, US-10) | CRUD de Product Backlog (1 por projeto) | autor | Alta | P | Backlog | 2026-08-28 | — |
-| Implementação — Épico 4: Sprint Backlogs (US-11 a US-14) | CRUD de Sprint Backlogs (N por projeto) | autor | Alta | M | Backlog | 2026-08-28 | — |
-| Implementação — Épico 5: Histórias de Usuário (US-15 a US-19) | CRUD + movimentação entre backlogs | autor | Alta | G | Backlog | 2026-08-28 | — |
-| Implementação — Épico 6: Épicos (US-20 a US-23) | CRUD de Épicos + vínculo com histórias | autor | Média | M | Backlog | 2026-08-28 | — |
-| Implementação — Épico 7: Critérios de Aceitação (US-24 a US-27) | CRUD, formato Dado/Quando/Então | autor | Alta | M | Backlog | 2026-08-28 | — |
-| Implementação — Épico 8: Estimativa e Priorização (US-28 a US-32) | Story points, MoSCoW, RICE + cálculo e ordenação | autor | Alta | M | Backlog | 2026-08-28 | — |
-| Implementação — Épico 9: RBAC, Segurança e Auditoria (US-33 a US-38) | Papéis Usuário/Administrador, criptografia em repouso, logging técnico e log de auditoria, painel do Administrador | autor | Alta | G | Backlog | 2026-08-28 | — |
-| Protótipo funcional + vídeo de demonstração | Gravação cobrindo um cenário de sucesso por serviço | autor | Alta | M | Backlog | 2026-08-27 | — |
+| Setup do projeto Flask | Estrutura de pastas, dependências, banco SQLite inicial, autenticação básica | autor | Alta | M | Concluído | 2026-08-27 | 2026-08-28 |
+| Implementação — Épico 1: Autenticação (US-01 a US-04) | Conta, login, restrição de acesso, logout | autor | Alta | M | Concluído | 2026-08-28 | 2026-08-28 |
+| Implementação — Épico 2: Projetos (US-05 a US-08) | CRUD de Projetos | autor | Alta | M | Concluído | 2026-08-28 | 2026-08-28 |
+| Implementação — Épico 3: Product Backlog (US-09, US-10) | CRUD de Product Backlog (1 por projeto) | autor | Alta | P | Concluído | 2026-08-28 | 2026-08-28 |
+| Implementação — Épico 4: Sprint Backlogs (US-11 a US-14) | CRUD de Sprint Backlogs (N por projeto) | autor | Alta | M | Concluído | 2026-08-28 | 2026-08-28 |
+| Implementação — Épico 5: Histórias de Usuário (US-15 a US-19) | CRUD + movimentação entre backlogs | autor | Alta | G | Concluído | 2026-08-28 | 2026-08-28 |
+| Implementação — Épico 6: Épicos (US-20 a US-23) | CRUD de Épicos + vínculo com histórias | autor | Média | M | Concluído | 2026-08-28 | 2026-08-28 |
+| Implementação — Épico 7: Critérios de Aceitação (US-24 a US-27) | CRUD, formato Dado/Quando/Então | autor | Alta | M | Concluído | 2026-08-28 | 2026-08-28 |
+| Implementação — Épico 8: Estimativa e Priorização (US-28 a US-32) | Story points, MoSCoW, RICE + cálculo e ordenação | autor | Alta | M | Concluído | 2026-08-28 | 2026-08-28 |
+| Implementação — Épico 9: RBAC, Segurança e Auditoria (US-33 a US-38) | Papéis Usuário/Administrador, criptografia em repouso, logging técnico e log de auditoria, painel do Administrador | autor | Alta | G | Concluído | 2026-08-28 | 2026-08-28 |
+| Protótipo funcional + vídeo de demonstração | Gravação cobrindo um cenário de sucesso por serviço | autor | Alta | M | Em Progresso | 2026-08-27 | — |
 | Descrição da infraestrutura de implantação | Hardware/software/serviços necessários | autor | Média | P | Concluído | 2026-08-27 | 2026-08-28 |
 | Empacotar entrega (ZIP + teste de descompactação) | Nome `ESW-<matrícula>.ZIP`, checar integridade e ausência de vírus | autor | Alta | P | Backlog | 2026-08-27 | — |
 
@@ -73,7 +73,10 @@ Cada cartão registra: **Nome**, **Descrição**, **Responsável** (sempre o aut
 | 2026-08-28 | Descrição da infraestrutura de implantação | Backlog → Em Progresso | Puxado para próximo — único artefato de "requisitos/design" restante antes do protótipo. |
 | 2026-08-28 | Descrição da infraestrutura de implantação | Em Progresso → Em Revisão → Concluído | Hardware, software, serviços, variáveis de ambiente e passos de implantação descritos — conferido contra o critério de avaliação 09. Todos os 7 artefatos de documentação (critérios 01–07 e 09) estão concluídos; falta apenas o protótipo (critério 08). |
 | 2026-08-28 | Setup do projeto Flask | Backlog → Em Progresso | Puxado para próximo: primeiro cartão de implementação, pré-requisito de todos os Épicos 1–9. |
+| 2026-08-28 | Setup do projeto Flask | Em Progresso → Em Revisão → Concluído | App factory, extensões (SQLAlchemy/Login/WTF/Talisman), config, schema completo (`app/models.py`), decorators de RBAC e serviço de auditoria criados e testados (`tests/`). |
+| 2026-08-28 | Implementação — Épicos 1 a 9 | Backlog → Em Progresso → Em Revisão → Concluído | Todos os 38 histórias implementadas como rotas Flask + templates Jinja2; suíte de 12 testes automatizados (`pytest`) cobre sinal/login, isolamento entre usuários, CRUD completo, cálculo RICE, mover/excluir sprint, RBAC do admin e criptografia — todos passando. Servidor real testado com `flask run` e `curl`. |
+| 2026-08-28 | Protótipo funcional + vídeo de demonstração | Backlog → Em Progresso | Código do protótipo pronto e testado; falta apenas gravar o vídeo de demonstração (passo manual do autor, fora do escopo de automação). |
 
 ## Próximo Passo Recomendado
 
-Todos os artefatos de documentação/design (critérios de avaliação 01–07 e 09) estão concluídos. O cartão em progresso é o **Setup do projeto Flask**, primeiro passo da implementação, seguido pelos Épicos 1–9 (na ordem do backlog de histórias) e, por fim, o **Protótipo funcional + vídeo de demonstração**.
+Todos os artefatos de documentação/design e todo o código do protótipo (Épicos 1–9, 38 histórias) estão concluídos e testados. Resta apenas gravar o **vídeo de demonstração** e, por fim, **empacotar a entrega** (ZIP com nome `ESW-<matrícula>.ZIP`).

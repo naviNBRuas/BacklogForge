@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}{{ 'Edit Story' if story else 'New Story' }}{% endblock %}
+{% block content %}
+<h1>{{ 'Edit Story' if story else 'New Story' }}</h1>
+<form method="post">
+  {{ form.hidden_tag() }}
+  <div class="field">{{ form.role_text.label }} {{ form.role_text() }}</div>
+  <div class="field">{{ form.action_text.label }} {{ form.action_text() }}</div>
+  <div class="field">{{ form.benefit_text.label }} {{ form.benefit_text() }}</div>
+  <button type="submit">Save</button>
+</form>
+{% endblock %}

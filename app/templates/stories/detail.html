@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}Story #{{ story.id }}{% endblock %}
+{% block content %}
+<p><a href="{{ url_for('backlogs.product', project_id=project.id) }}">&larr; Product Backlog</a></p>
+<h1>As a {{ story.role_text }}, I want {{ story.action_text }}, so that {{ story.benefit_text }}</h1>
+<p>
+  <a href="{{ url_for('stories.edit', project_id=project.id, story_id=story.id) }}">Edit</a>
+  <form class="inline" method="post" action="{{ url_for('stories.delete', project_id=project.id, story_id=story.id) }}"
+        onsubmit="return confirm('Delete this story?');">
+    <button type="submit">Delete</button>
+  </form>
+</p>
+
+<h2>Estimate &amp; Priority</h2>
+<form method="post" action="{{ url_for('stories.estimate', project_id=project.id, story_id=story.id) }}">
+  {{ estimate_form.hidden_tag() }}
+  <div class="field">{{ estimate_form.story_points.label }} {{ estimate_form.story_points() }}</div>
+  <div class="field">{{ estimate_form.moscow.label }} {{ estimate_form.moscow() }}</div>
+  <div class="field">{{ estimate_form.epic_id.label }} {{ estimate_form.epic_id() }}</div>
+  <div class="field">{{ estimate_form.rice_reach.label }} {{ estimate_form.rice_reach() }}</div>
+  <div class="field">{{ estimate_form.rice_impact.label }} {{ estimate_form.rice_impact() }}</div>
+  <div class="field">{{ estimate_form.rice_confidence.label }} {{ estimate_form.rice_confidence() }}</div>
+  <div class="field">{{ estimate_form.rice_effort.label }} {{ estimate_form.rice_effort() }}</div>
+  <p>RICE score: <strong>{{ '%.1f'|format(story.rice_score) if story.rice_score is not none else '—' }}</strong></p>
+  <button type="submit">Save</button>
+</form>
+
+<h2>Move Story</h2>
+<form method="post" action="{{ url_for('stories.move', project_id=project.id, story_id=story.id) }}">
+  {{ move_form.hidden_tag() }}
+  {{ move_form.sprint_backlog_id() }}
+  <button type="submit">Move</button>
+</form>
+
+<h2>Acceptance Criteria</h2>
+<p><a href="{{ url_for('criteria.create', project_id=project.id, story_id=story.id) }}">+ New Criterion</a></p>
+<ul>
+  {% for criterion in story.acceptance_criteria %}
+  <li>
+    Given {{ criterion.given_text }}, when {{ criterion.when_text }}, then {{ criterion.then_text }}
+    — <a href="{{ url_for('criteria.edit', project_id=project.id, story_id=story.id, criterion_id=criterion.id) }}">Edit</a>
+    <form class="inline" method="post" action="{{ url_for('criteria.delete', project_id=project.id, story_id=story.id, criterion_id=criterion.id) }}">
+      <button type="submit">Delete</button>
+    </form>
+  </li>
+  {% else %}
+  <li>No acceptance criteria yet.</li>
+  {% endfor %}
+</ul>
+{% endblock %}

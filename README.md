@@ -9,7 +9,19 @@ Practical assignment for the Software Engineering course (CIC0105) — a web sys
 
 ## Current Status
 
-All planning/design artifacts are done (items 1–7 and 9 of the checklist below). **Implementation is starting** — see the Kanban board's Epics 1–9 for the build order.
+All planning/design artifacts are done, and the Flask prototype is implemented and tested (all 38 user stories, 9 epics — see [`docs/en/kanban-board.md`](docs/en/kanban-board.md)). Only the demo video and final ZIP packaging remain.
+
+## Running Locally
+
+```bash
+python3 -m venv .venv && source .venv/bin/activate
+pip install -r requirements-dev.txt
+cp env.sample .env   # then edit SECRET_KEY, ADMIN_EMAIL, ADMIN_PASSWORD, etc.
+pytest               # 12 tests: auth, RBAC, CRUD, RICE, encryption
+flask --app run.py run
+```
+
+The first run seeds an `admin` account from `ADMIN_EMAIL`/`ADMIN_PASSWORD` (see [`docs/en/infrastructure.md`](docs/en/infrastructure.md)).
 
 ## Documentation
 
@@ -40,7 +52,7 @@ The assignment must be delivered in Portuguese (pt-BR) to the professor. This re
 5. [x] Software architecture description (architecture notebook).
 6. [x] User interface design (storyboards + wireframes).
 7. [x] Physical database design.
-8. [ ] System prototype + demo video — implementation starting next.
+8. [ ] System prototype + demo video — prototype code done and tested; video recording pending.
 9. [x] Deployment infrastructure description.
 
 > This README will be updated as artifacts are produced (each one becomes a card on the Kanban board).

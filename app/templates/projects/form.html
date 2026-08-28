@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}{{ 'Edit Project' if project else 'New Project' }}{% endblock %}
+{% block content %}
+<h1>{{ 'Edit Project' if project else 'New Project' }}</h1>
+<form method="post">
+  {{ form.hidden_tag() }}
+  <div class="field">{{ form.name.label }} {{ form.name() }}</div>
+  <div class="field">{{ form.description.label }} {{ form.description() }}</div>
+  <button type="submit">Save</button>
+</form>
+{% endblock %}

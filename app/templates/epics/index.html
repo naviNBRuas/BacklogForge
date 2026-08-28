@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Epics{% endblock %}
+{% block content %}
+<p><a href="{{ url_for('projects.detail', project_id=project.id) }}">&larr; {{ project.name }}</a></p>
+<h1>Epics</h1>
+<p><a href="{{ url_for('epics.create', project_id=project.id) }}">+ New Epic</a></p>
+<ul>
+  {% for epic in project.epics %}
+  <li><a href="{{ url_for('epics.detail', project_id=project.id, epic_id=epic.id) }}">{{ epic.name }}</a> ({{ epic.stories|length }} stories)</li>
+  {% endfor %}
+</ul>
+{% endblock %}
