@@ -36,7 +36,7 @@ def test_user_cannot_access_other_users_project(app, client):
     signup_and_login(client, email="a@example.com")
     resp = client.post("/projects/new", data={"name": "A's Project", "description": ""})
     project_id = int(resp.headers["Location"].rstrip("/").split("/")[-1])
-    client.get("/auth/logout")
+    client.post("/auth/logout")
 
     signup_and_login(client, email="b@example.com")
     resp = client.get(f"/projects/{project_id}")

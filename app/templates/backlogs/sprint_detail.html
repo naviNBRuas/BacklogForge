@@ -8,6 +8,7 @@
   <a href="{{ url_for('backlogs.edit_sprint', project_id=project.id, sprint_id=sprint.id) }}">Edit</a>
   <form class="inline" method="post" action="{{ url_for('backlogs.delete_sprint', project_id=project.id, sprint_id=sprint.id) }}"
         onsubmit="return confirm('Delete this sprint? Stories return to the Product Backlog.');">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
     <button type="submit">Delete</button>
   </form>
 </p>

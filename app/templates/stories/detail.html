@@ -7,6 +7,7 @@
   <a href="{{ url_for('stories.edit', project_id=project.id, story_id=story.id) }}">Edit</a>
   <form class="inline" method="post" action="{{ url_for('stories.delete', project_id=project.id, story_id=story.id) }}"
         onsubmit="return confirm('Delete this story?');">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
     <button type="submit">Delete</button>
   </form>
 </p>
@@ -40,6 +41,7 @@
     Given {{ criterion.given_text }}, when {{ criterion.when_text }}, then {{ criterion.then_text }}
     — <a href="{{ url_for('criteria.edit', project_id=project.id, story_id=story.id, criterion_id=criterion.id) }}">Edit</a>
     <form class="inline" method="post" action="{{ url_for('criteria.delete', project_id=project.id, story_id=story.id, criterion_id=criterion.id) }}">
+      <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
       <button type="submit">Delete</button>
     </form>
   </li>

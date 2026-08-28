@@ -8,6 +8,7 @@
   <a href="{{ url_for('epics.edit', project_id=project.id, epic_id=epic.id) }}">Edit</a>
   <form class="inline" method="post" action="{{ url_for('epics.delete', project_id=project.id, epic_id=epic.id) }}"
         onsubmit="return confirm('Delete this epic? Linked stories will just be unlinked.');">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
     <button type="submit">Delete</button>
   </form>
 </p>

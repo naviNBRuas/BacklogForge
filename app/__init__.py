@@ -2,12 +2,13 @@ from argon2 import PasswordHasher
 from flask import Flask, redirect, render_template, url_for
 
 from app.extensions import csrf, db, login_manager, talisman
-from config import Config
+from config import Config, INSECURE_DEFAULT_SECRET_KEY
 
 
 def create_app(config_class=Config):
     app = Flask(__name__)
     app.config.from_object(config_class)
+    _validate_secrets(app)
 
     db.init_app(app)
     login_manager.init_app(app)
@@ -59,6 +60,15 @@ def create_app(config_class=Config):
     return app
 
 
+def _validate_secrets(app):
+    if app.testing:
+        return
+    if app.config["SECRET_KEY"] == INSECURE_DEFAULT_SECRET_KEY and not app.debug:
+        raise RuntimeError("SECRET_KEY must be set via environment variable outside of debug mode.")
+    if app.config["ENCRYPTION_KEY"] is None:
+        raise RuntimeError("ENCRYPTION_KEY must be set via environment variable outside of debug mode.")
+
+
 def _seed_admin(app):
     from app.models import User
 
@@ -67,11 +77,11 @@ def _seed_admin(app):
     if not email or not password:
         return
 
-    user = User.query.filter_by(email=email).first()
-    if user is None:
+    # Only ever promote on first creation. If an account with this email
+    # already exists (e.g. someone signed up with it before the real admin
+    # did), silently promoting it here would let that pre-registered account
+    # seize the admin role — so an existing account is left untouched.
+    if User.query.filter_by(email=email).first() is None:
         user = User(email=email, password_hash=PasswordHasher().hash(password), role="admin")
         db.session.add(user)
-        db.session.commit()
-    elif user.role != "admin":
-        user.role = "admin"
         db.session.commit()

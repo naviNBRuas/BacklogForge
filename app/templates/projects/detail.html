@@ -8,6 +8,7 @@
   <a href="{{ url_for('projects.edit', project_id=project.id) }}">Edit</a>
   <form class="inline" method="post" action="{{ url_for('projects.delete', project_id=project.id) }}"
         onsubmit="return confirm('Delete this project and everything in it?');">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
     <button type="submit">Delete</button>
   </form>
 </p>

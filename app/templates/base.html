@@ -28,7 +28,11 @@
     </div>
     <div>
       {% if current_user.is_authenticated %}
-        {{ current_user.email }} — <a href="{{ url_for('auth.logout') }}">Log out</a>
+        {{ current_user.email }} —
+        <form class="inline" method="post" action="{{ url_for('auth.logout') }}">
+          <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+          <button type="submit">Log out</button>
+        </form>
       {% else %}
         <a href="{{ url_for('auth.login') }}">Log in</a>
         <a href="{{ url_for('auth.signup') }}">Sign up</a>
