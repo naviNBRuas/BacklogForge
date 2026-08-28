@@ -1,12 +1,14 @@
-from flask import abort, redirect, render_template, url_for
+from flask import abort, redirect, render_template, request, url_for
 from flask_login import current_user, login_required
 
 from app import audit
 from app.backlogs import bp
 from app.backlogs.forms import ProductBacklogForm, SprintBacklogForm
 from app.extensions import db
-from app.models import Project, SprintBacklog
+from app.models import MOSCOW_VALUES, Project, SprintBacklog
 from app.security import require_project_owner
+
+MOSCOW_ORDER = {value: index for index, value in enumerate(MOSCOW_VALUES)}
 
 
 @bp.route("/product", methods=["GET", "POST"])
@@ -21,9 +23,20 @@ def product(project_id):
         audit.log(current_user, "update", "product_backlog", backlog.id)
         return redirect(url_for("backlogs.product", project_id=project.id))
 
+    sort = request.args.get("sort")
+    stories = sort_stories(backlog.stories, sort)
     return render_template(
-        "backlogs/product.html", project=project, backlog=backlog, form=form
+        "backlogs/product.html", project=project, backlog=backlog, form=form,
+        stories=stories, sort=sort,
     )
+
+
+def sort_stories(stories, sort):
+    if sort == "rice":
+        return sorted(stories, key=lambda s: s.rice_score or float("-inf"), reverse=True)
+    if sort == "moscow":
+        return sorted(stories, key=lambda s: MOSCOW_ORDER.get(s.moscow, len(MOSCOW_VALUES)))
+    return stories
 
 
 @bp.route("/sprints/new", methods=["GET", "POST"])
@@ -51,7 +64,11 @@ def create_sprint(project_id):
 def sprint_detail(project_id, sprint_id):
     project = _get_project_or_404(project_id)
     sprint = _get_sprint_or_404(project, sprint_id)
-    return render_template("backlogs/sprint_detail.html", project=project, sprint=sprint)
+    sort = request.args.get("sort")
+    stories = sort_stories(sprint.stories, sort)
+    return render_template(
+        "backlogs/sprint_detail.html", project=project, sprint=sprint, stories=stories, sort=sort
+    )
 
 
 @bp.route("/sprints/<int:sprint_id>/edit", methods=["GET", "POST"])

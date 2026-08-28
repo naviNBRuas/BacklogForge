@@ -5,10 +5,17 @@
 <h1>Product Backlog</h1>
 <p><a href="{{ url_for('stories.create', project_id=project.id) }}">+ New Story</a></p>
 
-{% if backlog.stories %}
+<p>
+  Sort by:
+  <a href="{{ url_for('backlogs.product', project_id=project.id) }}">default</a> |
+  <a href="{{ url_for('backlogs.product', project_id=project.id, sort='rice') }}">RICE</a> |
+  <a href="{{ url_for('backlogs.product', project_id=project.id, sort='moscow') }}">MoSCoW</a>
+</p>
+
+{% if stories %}
 <table>
   <tr><th>Story</th><th>Points</th><th>MoSCoW</th><th>RICE</th></tr>
-  {% for story in backlog.stories %}
+  {% for story in stories %}
   <tr>
     <td><a href="{{ url_for('stories.detail', project_id=project.id, story_id=story.id) }}">As a {{ story.role_text }}, I want {{ story.action_text }}</a></td>
     <td>{{ story.story_points if story.story_points is not none else '—' }}</td>
