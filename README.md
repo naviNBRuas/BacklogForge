@@ -23,15 +23,17 @@ The assignment must be delivered in Portuguese (pt-BR) to the professor. This re
 |---|---|---|
 | Kanban board | [`docs/pt-BR/kanban-board.md`](docs/pt-BR/kanban-board.md) | [`docs/en/kanban-board.md`](docs/en/kanban-board.md) |
 | Vision and scope | [`docs/pt-BR/vision-and-scope.md`](docs/pt-BR/vision-and-scope.md) | [`docs/en/vision-and-scope.md`](docs/en/vision-and-scope.md) |
+| Non-functional requirements | [`docs/pt-BR/non-functional-requirements.md`](docs/pt-BR/non-functional-requirements.md) | [`docs/en/non-functional-requirements.md`](docs/en/non-functional-requirements.md) |
+| User story backlog | [`docs/pt-BR/user-stories.md`](docs/pt-BR/user-stories.md) | [`docs/en/user-stories.md`](docs/en/user-stories.md) |
 | Tech stack | [`docs/pt-BR/tech-stack.md`](docs/pt-BR/tech-stack.md) | [`docs/en/tech-stack.md`](docs/en/tech-stack.md) |
 
 ## Required Deliverables (delivery checklist)
 
-1. [ ] Management process description (Kanban board/cards).
-2. [ ] Vision and scope document.
-3. [ ] Non-functional requirements specification (system-wide requirements).
-4. [ ] Functional requirements specification via user stories.
-5. [ ] Software architecture description (architecture notebook).
+1. [x] Management process description (Kanban board/cards).
+2. [x] Vision and scope document.
+3. [x] Non-functional requirements specification (system-wide requirements).
+4. [x] Functional requirements specification via user stories.
+5. [ ] Software architecture description (architecture notebook) — in progress.
 6. [ ] User interface design (storyboards + wireframes).
 7. [ ] Physical database design.
 8. [ ] System prototype + demo video.

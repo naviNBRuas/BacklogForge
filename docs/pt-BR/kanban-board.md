@@ -31,8 +31,8 @@ Cada cartão registra: **Nome**, **Descrição**, **Responsável** (sempre o aut
 | Descrição do processo Kanban | Este documento (`kanban-board.md`) | autor | Alta | P | Concluído | 2026-08-27 | 2026-08-28 |
 | Documento de visão e escopo | `vision-and-scope.md` — problema, stakeholders, escopo | autor | Alta | P | Concluído | 2026-08-27 | 2026-08-28 |
 | Backlog de histórias de usuário (requisitos funcionais) | Épicos + histórias + critérios de aceitação cobrindo os 19 requisitos do enunciado | autor | Alta | G | Concluído | 2026-08-28 | 2026-08-28 |
-| Especificação de requisitos não funcionais | Documento formal de NFRs (usabilidade, segurança, portabilidade, normas etc.) | autor | Alta | M | Em Progresso | 2026-08-27 | — |
-| Architecture notebook | Descrição da arquitetura (objetivos, suposições, dependências, decisões, mecanismos, abstrações, impacto de Flask/SQLAlchemy/Jinja2) | autor | Alta | M | A Fazer | 2026-08-27 | — |
+| Especificação de requisitos não funcionais | Documento formal de NFRs (usabilidade, segurança, portabilidade, normas etc.) | autor | Alta | M | Concluído | 2026-08-27 | 2026-08-28 |
+| Architecture notebook | Descrição da arquitetura (objetivos, suposições, dependências, decisões, mecanismos, abstrações, impacto de Flask/SQLAlchemy/Jinja2) | autor | Alta | M | Em Progresso | 2026-08-27 | — |
 | Projeto de interface (storyboards + wireframes) | Um storyboard por cenário-chave de uso; wireframes simples por tela | autor | Média | M | Backlog | 2026-08-27 | — |
 | Projeto físico de banco de dados | Diagrama + descrição de tabelas/colunas/chaves/relacionamentos | autor | Alta | M | Backlog | 2026-08-27 | — |
 | Setup do projeto Flask | Estrutura de pastas, dependências, banco SQLite inicial, autenticação básica | autor | Alta | M | Backlog | 2026-08-27 | — |
@@ -63,7 +63,9 @@ Cada cartão registra: **Nome**, **Descrição**, **Responsável** (sempre o aut
 | 2026-08-28 | Especificação de requisitos não funcionais | Backlog → A Fazer → Em Progresso | Puxado para próximo, já que é o único artefato de "requisitos" ainda pendente e é pré-requisito conceitual da arquitetura. |
 | 2026-08-28 | Implementação — Épicos 1 a 8 | (criados diretamente no Backlog) | Cartões de implementação derivados da quebra do backlog de histórias de usuário em épicos. |
 | 2026-08-28 | Escopo: RBAC/segurança/logging | Fora de Escopo → Dentro do Escopo | Decisão do autor de tornar papéis (Usuário/Administrador) um controle de acesso real, com criptografia em repouso e logging/auditoria — atualizado em `vision-and-scope.md`, `tech-stack.md`; gerou o cartão "Implementação — Épico 9" e 6 novas histórias (US-33 a US-38) no backlog de histórias. |
+| 2026-08-28 | Especificação de requisitos não funcionais | Em Progresso → Em Revisão → Concluído | Documento cobre atributos de qualidade, segurança (RBAC, criptografia, sessão), interfaces, conformidade (OWASP), restrições, licenciamento e documentação — conferido contra o critério de avaliação 03. |
+| 2026-08-28 | Architecture notebook | A Fazer → Em Progresso | Puxado para próximo: as decisões de segurança/RBAC da NFR (item anterior) são pré-requisito direto dos mecanismos de arquitetura a descrever aqui. |
 
 ## Próximo Passo Recomendado
 
-Com o backlog de histórias de usuário concluído, o cartão em progresso é a **Especificação de requisitos não funcionais** — pré-requisito natural do **Architecture notebook** (próximo da fila em "A Fazer"), já que decisões de arquitetura respondem a requisitos não funcionais (desempenho, segurança, portabilidade etc.).
+Com a especificação de NFR concluída, o cartão em progresso é o **Architecture notebook** — já com os requisitos de segurança/RBAC/logging (NFR seção 3) e o backlog de histórias como insumo direto para elementos, mecanismos e decisões de arquitetura.
