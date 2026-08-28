@@ -33,8 +33,8 @@ Each card records: **Name**, **Description**, **Owner** (always the author, solo
 | User story backlog (functional requirements) | Epics + stories + acceptance criteria covering the 19 requirements in the assignment | author | High | L | Done | 2026-08-28 | 2026-08-28 |
 | Non-functional requirements specification | Formal NFR document (usability, security, portability, standards, etc.) | author | High | M | Done | 2026-08-27 | 2026-08-28 |
 | Architecture notebook | Architecture description (goals, assumptions, dependencies, decisions, mechanisms, abstractions, impact of Flask/SQLAlchemy/Jinja2) | author | High | M | Done | 2026-08-27 | 2026-08-28 |
-| Physical database design | Diagram + description of tables/columns/keys/relationships | author | High | M | In Progress | 2026-08-27 | — |
-| User interface design (storyboards + wireframes) | One storyboard per key usage scenario; simple wireframes per screen | author | Medium | M | Backlog | 2026-08-27 | — |
+| Physical database design | Diagram + description of tables/columns/keys/relationships | author | High | M | Done | 2026-08-27 | 2026-08-28 |
+| User interface design (storyboards + wireframes) | One storyboard per key usage scenario; simple wireframes per screen | author | Medium | M | In Progress | 2026-08-27 | — |
 | Flask project setup | Folder structure, dependencies, initial SQLite database, basic authentication | author | High | M | Backlog | 2026-08-27 | — |
 | Implementation — Epic 1: Authentication (US-01 to US-04) | Account, login, access restriction, logout | author | High | M | Backlog | 2026-08-28 | — |
 | Implementation — Epic 2: Projects (US-05 to US-08) | Projects CRUD | author | High | M | Backlog | 2026-08-28 | — |
@@ -67,7 +67,9 @@ Each card records: **Name**, **Description**, **Owner** (always the author, solo
 | 2026-08-28 | Architecture notebook | To Do → In Progress | Pulled next: the security/RBAC decisions from the NFR doc (previous item) are a direct prerequisite for the architecture mechanisms to be described here. |
 | 2026-08-28 | Architecture notebook | In Progress → Review → Done | Document covers goals, assumptions, dependencies, decisions/constraints, mechanisms, abstractions, perspectives, and tool impact — checked against grading criterion 05. |
 | 2026-08-28 | Physical database design | Backlog → To Do → In Progress | Pulled next: the entities and relationships already defined in the notebook's section 7 are the direct basis for the physical schema. |
+| 2026-08-28 | Physical database design | In Progress → Review → Done | ER diagram (mermaid) + 7 tables described (name, columns, keys, relationships, purpose) — checked against grading criterion 07. |
+| 2026-08-28 | User interface design (storyboards + wireframes) | Backlog → In Progress | Pulled next. |
 
 ## Recommended Next Step
 
-With the Architecture notebook done, the card in progress is the **Physical database design** — the entities/relationships from the notebook's section 7 map directly to tables, columns, and keys.
+With the physical database design done, the card in progress is the **User interface design (storyboards + wireframes)** — the CRUDs for each already-modeled entity become the screens to sketch.

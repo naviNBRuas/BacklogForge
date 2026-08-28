@@ -26,6 +26,7 @@ The assignment must be delivered in Portuguese (pt-BR) to the professor. This re
 | Non-functional requirements | [`docs/pt-BR/non-functional-requirements.md`](docs/pt-BR/non-functional-requirements.md) | [`docs/en/non-functional-requirements.md`](docs/en/non-functional-requirements.md) |
 | User story backlog | [`docs/pt-BR/user-stories.md`](docs/pt-BR/user-stories.md) | [`docs/en/user-stories.md`](docs/en/user-stories.md) |
 | Architecture notebook | [`docs/pt-BR/architecture-notebook.md`](docs/pt-BR/architecture-notebook.md) | [`docs/en/architecture-notebook.md`](docs/en/architecture-notebook.md) |
+| Database design | [`docs/pt-BR/database-design.md`](docs/pt-BR/database-design.md) | [`docs/en/database-design.md`](docs/en/database-design.md) |
 | Tech stack | [`docs/pt-BR/tech-stack.md`](docs/pt-BR/tech-stack.md) | [`docs/en/tech-stack.md`](docs/en/tech-stack.md) |
 
 ## Required Deliverables (delivery checklist)
@@ -35,8 +36,8 @@ The assignment must be delivered in Portuguese (pt-BR) to the professor. This re
 3. [x] Non-functional requirements specification (system-wide requirements).
 4. [x] Functional requirements specification via user stories.
 5. [x] Software architecture description (architecture notebook).
-6. [ ] User interface design (storyboards + wireframes).
-7. [ ] Physical database design — in progress.
+6. [ ] User interface design (storyboards + wireframes) — in progress.
+7. [x] Physical database design.
 8. [ ] System prototype + demo video.
 9. [ ] Deployment infrastructure description.
 
