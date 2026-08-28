@@ -41,7 +41,18 @@ The assignment must be delivered in Portuguese (pt-BR) to the professor. This re
 | Database design | [`docs/pt-BR/database-design.md`](docs/pt-BR/database-design.md) | [`docs/en/database-design.md`](docs/en/database-design.md) |
 | UI design (storyboards + wireframes) | [`docs/pt-BR/ui-design.md`](docs/pt-BR/ui-design.md) | [`docs/en/ui-design.md`](docs/en/ui-design.md) |
 | Infrastructure description | [`docs/pt-BR/infrastructure.md`](docs/pt-BR/infrastructure.md) | [`docs/en/infrastructure.md`](docs/en/infrastructure.md) |
+| Artifact authorship | [`docs/pt-BR/autoria.md`](docs/pt-BR/autoria.md) | [`docs/en/authorship.md`](docs/en/authorship.md) |
+| Demo video script/checklist | [`docs/pt-BR/video-script.md`](docs/pt-BR/video-script.md) | [`docs/en/video-script.md`](docs/en/video-script.md) |
 | Tech stack | [`docs/pt-BR/tech-stack.md`](docs/pt-BR/tech-stack.md) | [`docs/en/tech-stack.md`](docs/en/tech-stack.md) |
+
+### Generating delivery PDFs
+
+The assignment requires textual artifacts as PDF (Instruction 7). The pt-BR docs are the source of truth; PDFs are a build step, not committed to git:
+
+```bash
+sudo apt-get install -y pandoc texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-lang-portuguese
+python3 scripts/build_pdfs.py   # writes dist/pdf/*.pdf
+```
 
 ## Required Deliverables (delivery checklist)
 
@@ -52,7 +63,7 @@ The assignment must be delivered in Portuguese (pt-BR) to the professor. This re
 5. [x] Software architecture description (architecture notebook).
 6. [x] User interface design (storyboards + wireframes).
 7. [x] Physical database design.
-8. [ ] System prototype + demo video — prototype code done and tested; video recording pending.
+8. [ ] System prototype + demo video — prototype code done and tested; scenario checklist ready ([`docs/en/video-script.md`](docs/en/video-script.md)); recording pending.
 9. [x] Deployment infrastructure description.
 
 > This README will be updated as artifacts are produced (each one becomes a card on the Kanban board).
