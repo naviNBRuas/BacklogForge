@@ -28,26 +28,26 @@ Each card records: **Name**, **Description**, **Owner** (always the author, solo
 
 | Name | Description | Owner | Priority | Estimate | Status | Created | Completed |
 |---|---|---|---|---|---|---|---|
-| Kanban process description | This document (`kanban-board.md`) | author | High | S | Done | 2026-08-27 | 2026-08-28 |
-| Vision and scope document | `vision-and-scope.md` — problem, stakeholders, scope | author | High | S | Done | 2026-08-27 | 2026-08-28 |
-| User story backlog (functional requirements) | Epics + stories + acceptance criteria covering the 19 requirements in the assignment | author | High | L | Done | 2026-08-28 | 2026-08-28 |
-| Non-functional requirements specification | Formal NFR document (usability, security, portability, standards, etc.) | author | High | M | Done | 2026-08-27 | 2026-08-28 |
-| Architecture notebook | Architecture description (goals, assumptions, dependencies, decisions, mechanisms, abstractions, impact of Flask/SQLAlchemy/Jinja2) | author | High | M | Done | 2026-08-27 | 2026-08-28 |
-| Physical database design | Diagram + description of tables/columns/keys/relationships | author | High | M | Done | 2026-08-27 | 2026-08-28 |
-| User interface design (storyboards + wireframes) | One storyboard per key usage scenario; simple wireframes per screen | author | Medium | M | Done | 2026-08-27 | 2026-08-28 |
-| Flask project setup | Folder structure, dependencies, initial SQLite database, basic authentication | author | High | M | Done | 2026-08-27 | 2026-08-28 |
-| Implementation — Epic 1: Authentication (US-01 to US-04) | Account, login, access restriction, logout | author | High | M | Done | 2026-08-28 | 2026-08-28 |
-| Implementation — Epic 2: Projects (US-05 to US-08) | Projects CRUD | author | High | M | Done | 2026-08-28 | 2026-08-28 |
-| Implementation — Epic 3: Product Backlog (US-09, US-10) | Product Backlog CRUD (1 per project) | author | High | S | Done | 2026-08-28 | 2026-08-28 |
-| Implementation — Epic 4: Sprint Backlogs (US-11 to US-14) | Sprint Backlogs CRUD (N per project) | author | High | M | Done | 2026-08-28 | 2026-08-28 |
-| Implementation — Epic 5: User Stories (US-15 to US-19) | CRUD + moving between backlogs | author | High | L | Done | 2026-08-28 | 2026-08-28 |
-| Implementation — Epic 6: Epics (US-20 to US-23) | Epics CRUD + linking to stories | author | Medium | M | Done | 2026-08-28 | 2026-08-28 |
-| Implementation — Epic 7: Acceptance Criteria (US-24 to US-27) | CRUD, Given/When/Then format | author | High | M | Done | 2026-08-28 | 2026-08-28 |
-| Implementation — Epic 8: Estimation and Prioritization (US-28 to US-32) | Story points, MoSCoW, RICE + calculation and sorting | author | High | M | Done | 2026-08-28 | 2026-08-28 |
-| Implementation — Epic 9: RBAC, Security, and Auditing (US-33 to US-38) | User/Administrator roles, encryption at rest, technical logging and audit log, admin dashboard | author | High | L | Done | 2026-08-28 | 2026-08-28 |
-| Functional prototype + demo video | Recording covering one success scenario per service | author | High | M | In Progress | 2026-08-27 | — |
-| Deployment infrastructure description | Required hardware/software/services | author | Medium | S | Done | 2026-08-27 | 2026-08-28 |
-| Package the delivery (ZIP + unpack test) | Name `ESW-<student ID>.ZIP`, check integrity and no viruses | author | High | S | Backlog | 2026-08-27 | — |
+| Kanban process description | This document (`kanban-board.md`) | Navinchandry Bittencourt Ruas | High | S | Done | 2026-08-27 | 2026-08-28 |
+| Vision and scope document | `vision-and-scope.md` — problem, stakeholders, scope | Navinchandry Bittencourt Ruas | High | S | Done | 2026-08-27 | 2026-08-28 |
+| User story backlog (functional requirements) | Epics + stories + acceptance criteria covering the 19 requirements in the assignment | Navinchandry Bittencourt Ruas | High | L | Done | 2026-08-28 | 2026-08-28 |
+| Non-functional requirements specification | Formal NFR document (usability, security, portability, standards, etc.) | Navinchandry Bittencourt Ruas | High | M | Done | 2026-08-27 | 2026-08-28 |
+| Architecture notebook | Architecture description (goals, assumptions, dependencies, decisions, mechanisms, abstractions, impact of Flask/SQLAlchemy/Jinja2) | Navinchandry Bittencourt Ruas | High | M | Done | 2026-08-27 | 2026-08-28 |
+| Physical database design | Diagram + description of tables/columns/keys/relationships | Navinchandry Bittencourt Ruas | High | M | Done | 2026-08-27 | 2026-08-28 |
+| User interface design (storyboards + wireframes) | One storyboard per key usage scenario; simple wireframes per screen | Navinchandry Bittencourt Ruas | Medium | M | Done | 2026-08-27 | 2026-08-28 |
+| Flask project setup | Folder structure, dependencies, initial SQLite database, basic authentication | Navinchandry Bittencourt Ruas | High | M | Done | 2026-08-27 | 2026-08-28 |
+| Implementation — Epic 1: Authentication (US-01 to US-04) | Account, login, access restriction, logout | Navinchandry Bittencourt Ruas | High | M | Done | 2026-08-28 | 2026-08-28 |
+| Implementation — Epic 2: Projects (US-05 to US-08) | Projects CRUD | Navinchandry Bittencourt Ruas | High | M | Done | 2026-08-28 | 2026-08-28 |
+| Implementation — Epic 3: Product Backlog (US-09, US-10) | Product Backlog CRUD (1 per project) | Navinchandry Bittencourt Ruas | High | S | Done | 2026-08-28 | 2026-08-28 |
+| Implementation — Epic 4: Sprint Backlogs (US-11 to US-14) | Sprint Backlogs CRUD (N per project) | Navinchandry Bittencourt Ruas | High | M | Done | 2026-08-28 | 2026-08-28 |
+| Implementation — Epic 5: User Stories (US-15 to US-19) | CRUD + moving between backlogs | Navinchandry Bittencourt Ruas | High | L | Done | 2026-08-28 | 2026-08-28 |
+| Implementation — Epic 6: Epics (US-20 to US-23) | Epics CRUD + linking to stories | Navinchandry Bittencourt Ruas | Medium | M | Done | 2026-08-28 | 2026-08-28 |
+| Implementation — Epic 7: Acceptance Criteria (US-24 to US-27) | CRUD, Given/When/Then format | Navinchandry Bittencourt Ruas | High | M | Done | 2026-08-28 | 2026-08-28 |
+| Implementation — Epic 8: Estimation and Prioritization (US-28 to US-32) | Story points, MoSCoW, RICE + calculation and sorting | Navinchandry Bittencourt Ruas | High | M | Done | 2026-08-28 | 2026-08-28 |
+| Implementation — Epic 9: RBAC, Security, and Auditing (US-33 to US-38) | User/Administrator roles, encryption at rest, technical logging and audit log, admin dashboard | Navinchandry Bittencourt Ruas | High | L | Done | 2026-08-28 | 2026-08-28 |
+| Functional prototype + demo video | Recording covering one success scenario per service | Navinchandry Bittencourt Ruas | High | M | In Progress | 2026-08-27 | — |
+| Deployment infrastructure description | Required hardware/software/services | Navinchandry Bittencourt Ruas | Medium | S | Done | 2026-08-27 | 2026-08-28 |
+| Package the delivery (ZIP + unpack test) | Name `ESW-241034353.ZIP`, check integrity and no viruses | Navinchandry Bittencourt Ruas | High | S | Backlog | 2026-08-27 | — |
 
 > Current WIP (In Progress column): **1/1** — within the limit. New cards are added to the Backlog as subtasks emerge (e.g., the 8 implementation cards above were born from breaking the user story backlog into epics, when that card was completed).
 
@@ -79,4 +79,4 @@ Each card records: **Name**, **Description**, **Owner** (always the author, solo
 
 ## Recommended Next Step
 
-All documentation/design artifacts and the full prototype code (Epics 1–9, 38 stories) are done and tested. Only the **demo video** and, finally, **packaging the delivery** (a ZIP named `ESW-<student ID>.ZIP`) remain.
+All documentation/design artifacts and the full prototype code (Epics 1–9, 38 stories) are done and tested. Only the **demo video** and, finally, **packaging the delivery** (a ZIP named `ESW-241034353.ZIP`) remain.

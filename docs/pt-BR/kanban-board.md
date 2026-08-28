@@ -28,26 +28,26 @@ Cada cartão registra: **Nome**, **Descrição**, **Responsável** (sempre o aut
 
 | Nome | Descrição | Responsável | Prioridade | Estimativa | Status | Criado em | Concluído em |
 |---|---|---|---|---|---|---|---|
-| Descrição do processo Kanban | Este documento (`kanban-board.md`) | autor | Alta | P | Concluído | 2026-08-27 | 2026-08-28 |
-| Documento de visão e escopo | `vision-and-scope.md` — problema, stakeholders, escopo | autor | Alta | P | Concluído | 2026-08-27 | 2026-08-28 |
-| Backlog de histórias de usuário (requisitos funcionais) | Épicos + histórias + critérios de aceitação cobrindo os 19 requisitos do enunciado | autor | Alta | G | Concluído | 2026-08-28 | 2026-08-28 |
-| Especificação de requisitos não funcionais | Documento formal de NFRs (usabilidade, segurança, portabilidade, normas etc.) | autor | Alta | M | Concluído | 2026-08-27 | 2026-08-28 |
-| Architecture notebook | Descrição da arquitetura (objetivos, suposições, dependências, decisões, mecanismos, abstrações, impacto de Flask/SQLAlchemy/Jinja2) | autor | Alta | M | Concluído | 2026-08-27 | 2026-08-28 |
-| Projeto físico de banco de dados | Diagrama + descrição de tabelas/colunas/chaves/relacionamentos | autor | Alta | M | Concluído | 2026-08-27 | 2026-08-28 |
-| Projeto de interface (storyboards + wireframes) | Um storyboard por cenário-chave de uso; wireframes simples por tela | autor | Média | M | Concluído | 2026-08-27 | 2026-08-28 |
-| Setup do projeto Flask | Estrutura de pastas, dependências, banco SQLite inicial, autenticação básica | autor | Alta | M | Concluído | 2026-08-27 | 2026-08-28 |
-| Implementação — Épico 1: Autenticação (US-01 a US-04) | Conta, login, restrição de acesso, logout | autor | Alta | M | Concluído | 2026-08-28 | 2026-08-28 |
-| Implementação — Épico 2: Projetos (US-05 a US-08) | CRUD de Projetos | autor | Alta | M | Concluído | 2026-08-28 | 2026-08-28 |
-| Implementação — Épico 3: Product Backlog (US-09, US-10) | CRUD de Product Backlog (1 por projeto) | autor | Alta | P | Concluído | 2026-08-28 | 2026-08-28 |
-| Implementação — Épico 4: Sprint Backlogs (US-11 a US-14) | CRUD de Sprint Backlogs (N por projeto) | autor | Alta | M | Concluído | 2026-08-28 | 2026-08-28 |
-| Implementação — Épico 5: Histórias de Usuário (US-15 a US-19) | CRUD + movimentação entre backlogs | autor | Alta | G | Concluído | 2026-08-28 | 2026-08-28 |
-| Implementação — Épico 6: Épicos (US-20 a US-23) | CRUD de Épicos + vínculo com histórias | autor | Média | M | Concluído | 2026-08-28 | 2026-08-28 |
-| Implementação — Épico 7: Critérios de Aceitação (US-24 a US-27) | CRUD, formato Dado/Quando/Então | autor | Alta | M | Concluído | 2026-08-28 | 2026-08-28 |
-| Implementação — Épico 8: Estimativa e Priorização (US-28 a US-32) | Story points, MoSCoW, RICE + cálculo e ordenação | autor | Alta | M | Concluído | 2026-08-28 | 2026-08-28 |
-| Implementação — Épico 9: RBAC, Segurança e Auditoria (US-33 a US-38) | Papéis Usuário/Administrador, criptografia em repouso, logging técnico e log de auditoria, painel do Administrador | autor | Alta | G | Concluído | 2026-08-28 | 2026-08-28 |
-| Protótipo funcional + vídeo de demonstração | Gravação cobrindo um cenário de sucesso por serviço | autor | Alta | M | Em Progresso | 2026-08-27 | — |
-| Descrição da infraestrutura de implantação | Hardware/software/serviços necessários | autor | Média | P | Concluído | 2026-08-27 | 2026-08-28 |
-| Empacotar entrega (ZIP + teste de descompactação) | Nome `ESW-<matrícula>.ZIP`, checar integridade e ausência de vírus | autor | Alta | P | Backlog | 2026-08-27 | — |
+| Descrição do processo Kanban | Este documento (`kanban-board.md`) | Navinchandry Bittencourt Ruas | Alta | P | Concluído | 2026-08-27 | 2026-08-28 |
+| Documento de visão e escopo | `vision-and-scope.md` — problema, stakeholders, escopo | Navinchandry Bittencourt Ruas | Alta | P | Concluído | 2026-08-27 | 2026-08-28 |
+| Backlog de histórias de usuário (requisitos funcionais) | Épicos + histórias + critérios de aceitação cobrindo os 19 requisitos do enunciado | Navinchandry Bittencourt Ruas | Alta | G | Concluído | 2026-08-28 | 2026-08-28 |
+| Especificação de requisitos não funcionais | Documento formal de NFRs (usabilidade, segurança, portabilidade, normas etc.) | Navinchandry Bittencourt Ruas | Alta | M | Concluído | 2026-08-27 | 2026-08-28 |
+| Architecture notebook | Descrição da arquitetura (objetivos, suposições, dependências, decisões, mecanismos, abstrações, impacto de Flask/SQLAlchemy/Jinja2) | Navinchandry Bittencourt Ruas | Alta | M | Concluído | 2026-08-27 | 2026-08-28 |
+| Projeto físico de banco de dados | Diagrama + descrição de tabelas/colunas/chaves/relacionamentos | Navinchandry Bittencourt Ruas | Alta | M | Concluído | 2026-08-27 | 2026-08-28 |
+| Projeto de interface (storyboards + wireframes) | Um storyboard por cenário-chave de uso; wireframes simples por tela | Navinchandry Bittencourt Ruas | Média | M | Concluído | 2026-08-27 | 2026-08-28 |
+| Setup do projeto Flask | Estrutura de pastas, dependências, banco SQLite inicial, autenticação básica | Navinchandry Bittencourt Ruas | Alta | M | Concluído | 2026-08-27 | 2026-08-28 |
+| Implementação — Épico 1: Autenticação (US-01 a US-04) | Conta, login, restrição de acesso, logout | Navinchandry Bittencourt Ruas | Alta | M | Concluído | 2026-08-28 | 2026-08-28 |
+| Implementação — Épico 2: Projetos (US-05 a US-08) | CRUD de Projetos | Navinchandry Bittencourt Ruas | Alta | M | Concluído | 2026-08-28 | 2026-08-28 |
+| Implementação — Épico 3: Product Backlog (US-09, US-10) | CRUD de Product Backlog (1 por projeto) | Navinchandry Bittencourt Ruas | Alta | P | Concluído | 2026-08-28 | 2026-08-28 |
+| Implementação — Épico 4: Sprint Backlogs (US-11 a US-14) | CRUD de Sprint Backlogs (N por projeto) | Navinchandry Bittencourt Ruas | Alta | M | Concluído | 2026-08-28 | 2026-08-28 |
+| Implementação — Épico 5: Histórias de Usuário (US-15 a US-19) | CRUD + movimentação entre backlogs | Navinchandry Bittencourt Ruas | Alta | G | Concluído | 2026-08-28 | 2026-08-28 |
+| Implementação — Épico 6: Épicos (US-20 a US-23) | CRUD de Épicos + vínculo com histórias | Navinchandry Bittencourt Ruas | Média | M | Concluído | 2026-08-28 | 2026-08-28 |
+| Implementação — Épico 7: Critérios de Aceitação (US-24 a US-27) | CRUD, formato Dado/Quando/Então | Navinchandry Bittencourt Ruas | Alta | M | Concluído | 2026-08-28 | 2026-08-28 |
+| Implementação — Épico 8: Estimativa e Priorização (US-28 a US-32) | Story points, MoSCoW, RICE + cálculo e ordenação | Navinchandry Bittencourt Ruas | Alta | M | Concluído | 2026-08-28 | 2026-08-28 |
+| Implementação — Épico 9: RBAC, Segurança e Auditoria (US-33 a US-38) | Papéis Usuário/Administrador, criptografia em repouso, logging técnico e log de auditoria, painel do Administrador | Navinchandry Bittencourt Ruas | Alta | G | Concluído | 2026-08-28 | 2026-08-28 |
+| Protótipo funcional + vídeo de demonstração | Gravação cobrindo um cenário de sucesso por serviço | Navinchandry Bittencourt Ruas | Alta | M | Em Progresso | 2026-08-27 | — |
+| Descrição da infraestrutura de implantação | Hardware/software/serviços necessários | Navinchandry Bittencourt Ruas | Média | P | Concluído | 2026-08-27 | 2026-08-28 |
+| Empacotar entrega (ZIP + teste de descompactação) | Nome `ESW-241034353.ZIP`, checar integridade e ausência de vírus | Navinchandry Bittencourt Ruas | Alta | P | Backlog | 2026-08-27 | — |
 
 > WIP atual (coluna Em Progresso): **1/1** — respeitando o limite. Novos cartões são adicionados ao Backlog conforme subtarefas emergem (ex.: os 8 cartões de implementação acima nasceram da quebra do Backlog de histórias de usuário em épicos, quando esse cartão foi concluído).
 
@@ -79,4 +79,4 @@ Cada cartão registra: **Nome**, **Descrição**, **Responsável** (sempre o aut
 
 ## Próximo Passo Recomendado
 
-Todos os artefatos de documentação/design e todo o código do protótipo (Épicos 1–9, 38 histórias) estão concluídos e testados. Resta apenas gravar o **vídeo de demonstração** e, por fim, **empacotar a entrega** (ZIP com nome `ESW-<matrícula>.ZIP`).
+Todos os artefatos de documentação/design e todo o código do protótipo (Épicos 1–9, 38 histórias) estão concluídos e testados. Resta apenas gravar o **vídeo de demonstração** e, por fim, **empacotar a entrega** (ZIP com nome `ESW-241034353.ZIP`).
