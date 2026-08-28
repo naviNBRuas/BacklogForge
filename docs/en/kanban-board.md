@@ -47,6 +47,10 @@ Each card records: **Name**, **Description**, **Owner** (always the author, solo
 | Implementation — Epic 9: RBAC, Security, and Auditing (US-33 to US-38) | User/Administrator roles, encryption at rest, technical logging and audit log, admin dashboard | Navinchandry Bittencourt Ruas | High | L | Done | 2026-08-28 | 2026-08-28 |
 | Functional prototype + demo video | Recording covering one success scenario per service | Navinchandry Bittencourt Ruas | High | M | In Progress | 2026-08-27 | — |
 | Deployment infrastructure description | Required hardware/software/services | Navinchandry Bittencourt Ruas | Medium | S | Done | 2026-08-27 | 2026-08-28 |
+| Authorship document | `authorship.md` — which artifacts each member built (Instruction 6, required even for solo work) | Navinchandry Bittencourt Ruas | High | S | Done | 2026-08-28 | 2026-08-28 |
+| LICENSE | MIT license file promised in `non-functional-requirements.md` §9 but never created | Navinchandry Bittencourt Ruas | Low | S | Done | 2026-08-28 | 2026-08-28 |
+| Demo video script | `video-script.md` — scenario checklist ensuring 1 success case per service (Instruction 24) | Navinchandry Bittencourt Ruas | High | S | Done | 2026-08-28 | 2026-08-28 |
+| PDF export pipeline | `scripts/build_pdfs.py` (pandoc + xelatex) — Instruction 7 requires PDF delivery | Navinchandry Bittencourt Ruas | High | M | Done | 2026-08-28 | 2026-08-28 |
 | Package the delivery (ZIP + unpack test) | Name `ESW-241034353.ZIP`, check integrity and no viruses | Navinchandry Bittencourt Ruas | High | S | Backlog | 2026-08-27 | — |
 
 > Current WIP (In Progress column): **1/1** — within the limit. New cards are added to the Backlog as subtasks emerge (e.g., the 8 implementation cards above were born from breaking the user story backlog into epics, when that card was completed).
@@ -76,6 +80,9 @@ Each card records: **Name**, **Description**, **Owner** (always the author, solo
 | 2026-08-28 | Flask project setup | In Progress → Review → Done | App factory, extensions (SQLAlchemy/Login/WTF/Talisman), config, full schema (`app/models.py`), RBAC decorators, and audit service created and tested (`tests/`). |
 | 2026-08-28 | Implementation — Epics 1 to 9 | Backlog → In Progress → Review → Done | All 38 stories implemented as Flask routes + Jinja2 templates; a 12-test automated suite (`pytest`) covers signup/login, isolation between users, full CRUD, RICE calculation, moving/deleting a sprint, admin RBAC, and encryption — all passing. Real server tested with `flask run` and `curl`. |
 | 2026-08-28 | Functional prototype + demo video | Backlog → In Progress | Prototype code is ready and tested; only the demo video recording remains (a manual step for the author, outside automation's scope). |
+| 2026-08-28 | Full audit against the assignment | — | A full re-read of `docs/spec/ESW-TRABALHO-PRATICO.md` (requirements, instructions, and grading criteria) found 5 gaps: (1) authorship document missing (Instruction 6); (2) textual artifacts only in Markdown, no PDF (Instruction 7); (3) `LICENSE` promised but never created; (4) no script ensuring "1 success scenario per service" coverage in the video (Instruction 24); (5) US-32 (sort backlog) marked Done under Epic 8 without actually being implemented. |
+| 2026-08-28 | Authorship document, LICENSE, video script, PDF pipeline | Backlog → In Progress → Review → Done | The 4 documentation/process gaps from the audit were resolved in the same session. |
+| 2026-08-28 | Implementation — Epic 8 (US-32) | Review (reopened) → Done | Code gap from the audit fixed: `?sort=rice\|moscow` implemented on the Product Backlog and Sprint Backlog, with 4 new tests. |
 
 ## Recommended Next Step
 

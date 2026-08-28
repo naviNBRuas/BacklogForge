@@ -47,6 +47,10 @@ Cada cartão registra: **Nome**, **Descrição**, **Responsável** (sempre o aut
 | Implementação — Épico 9: RBAC, Segurança e Auditoria (US-33 a US-38) | Papéis Usuário/Administrador, criptografia em repouso, logging técnico e log de auditoria, painel do Administrador | Navinchandry Bittencourt Ruas | Alta | G | Concluído | 2026-08-28 | 2026-08-28 |
 | Protótipo funcional + vídeo de demonstração | Gravação cobrindo um cenário de sucesso por serviço | Navinchandry Bittencourt Ruas | Alta | M | Em Progresso | 2026-08-27 | — |
 | Descrição da infraestrutura de implantação | Hardware/software/serviços necessários | Navinchandry Bittencourt Ruas | Média | P | Concluído | 2026-08-27 | 2026-08-28 |
+| Documento de autoria | `autoria.md` — quais artefatos cada membro construiu (Instrução 6, exigido mesmo em trabalho individual) | Navinchandry Bittencourt Ruas | Alta | P | Concluído | 2026-08-28 | 2026-08-28 |
+| LICENSE | Arquivo de licença MIT prometido em `non-functional-requirements.md` §9 mas nunca criado | Navinchandry Bittencourt Ruas | Baixa | P | Concluído | 2026-08-28 | 2026-08-28 |
+| Roteiro do vídeo de demonstração | `video-script.md` — checklist de cenários para garantir 1 sucesso por serviço (Instrução 24) | Navinchandry Bittencourt Ruas | Alta | P | Concluído | 2026-08-28 | 2026-08-28 |
+| Pipeline de exportação para PDF | `scripts/build_pdfs.py` (pandoc + xelatex) — Instrução 7 exige entrega em PDF | Navinchandry Bittencourt Ruas | Alta | M | Concluído | 2026-08-28 | 2026-08-28 |
 | Empacotar entrega (ZIP + teste de descompactação) | Nome `ESW-241034353.ZIP`, checar integridade e ausência de vírus | Navinchandry Bittencourt Ruas | Alta | P | Backlog | 2026-08-27 | — |
 
 > WIP atual (coluna Em Progresso): **1/1** — respeitando o limite. Novos cartões são adicionados ao Backlog conforme subtarefas emergem (ex.: os 8 cartões de implementação acima nasceram da quebra do Backlog de histórias de usuário em épicos, quando esse cartão foi concluído).
@@ -76,6 +80,9 @@ Cada cartão registra: **Nome**, **Descrição**, **Responsável** (sempre o aut
 | 2026-08-28 | Setup do projeto Flask | Em Progresso → Em Revisão → Concluído | App factory, extensões (SQLAlchemy/Login/WTF/Talisman), config, schema completo (`app/models.py`), decorators de RBAC e serviço de auditoria criados e testados (`tests/`). |
 | 2026-08-28 | Implementação — Épicos 1 a 9 | Backlog → Em Progresso → Em Revisão → Concluído | Todos os 38 histórias implementadas como rotas Flask + templates Jinja2; suíte de 12 testes automatizados (`pytest`) cobre sinal/login, isolamento entre usuários, CRUD completo, cálculo RICE, mover/excluir sprint, RBAC do admin e criptografia — todos passando. Servidor real testado com `flask run` e `curl`. |
 | 2026-08-28 | Protótipo funcional + vídeo de demonstração | Backlog → Em Progresso | Código do protótipo pronto e testado; falta apenas gravar o vídeo de demonstração (passo manual do autor, fora do escopo de automação). |
+| 2026-08-28 | Auditoria completa contra o enunciado | — | Releitura integral de `docs/spec/ESW-TRABALHO-PRATICO.md` (requisitos, instruções e critérios de avaliação) encontrou 5 lacunas: (1) documento de autoria ausente (Instrução 6); (2) artefatos textuais só em Markdown, sem PDF (Instrução 7); (3) `LICENSE` prometido mas não criado; (4) nenhum roteiro garantindo cobertura de "1 cenário de sucesso por serviço" no vídeo (Instrução 24); (5) US-32 (ordenar backlog) marcada Concluída no Épico 8 sem ter sido implementada. |
+| 2026-08-28 | Documento de autoria, LICENSE, roteiro do vídeo, pipeline de PDF | Backlog → Em Progresso → Em Revisão → Concluído | As 4 lacunas de documentação/processo da auditoria foram resolvidas na mesma sessão. |
+| 2026-08-28 | Implementação — Épico 8 (US-32) | Em Revisão (reaberto) → Concluído | Lacuna de código da auditoria corrigida: `?sort=rice\|moscow` implementado em Product Backlog e Sprint Backlog, com 4 novos testes. |
 
 ## Próximo Passo Recomendado
 
