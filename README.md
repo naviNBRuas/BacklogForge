@@ -9,7 +9,7 @@ Practical assignment for the Software Engineering course (CIC0105) — a web sys
 
 ## Current Status
 
-**Planning** phase. No code yet — this repository currently contains only the planning artifacts required by the assignment ([`docs/spec/ESW-TRABALHO-PRATICO.md`](docs/spec/ESW-TRABALHO-PRATICO.md)) that precede implementation.
+All planning/design artifacts are done (items 1–7 and 9 of the checklist below). **Implementation is starting** — see the Kanban board's Epics 1–9 for the build order.
 
 ## Documentation
 
@@ -28,6 +28,7 @@ The assignment must be delivered in Portuguese (pt-BR) to the professor. This re
 | Architecture notebook | [`docs/pt-BR/architecture-notebook.md`](docs/pt-BR/architecture-notebook.md) | [`docs/en/architecture-notebook.md`](docs/en/architecture-notebook.md) |
 | Database design | [`docs/pt-BR/database-design.md`](docs/pt-BR/database-design.md) | [`docs/en/database-design.md`](docs/en/database-design.md) |
 | UI design (storyboards + wireframes) | [`docs/pt-BR/ui-design.md`](docs/pt-BR/ui-design.md) | [`docs/en/ui-design.md`](docs/en/ui-design.md) |
+| Infrastructure description | [`docs/pt-BR/infrastructure.md`](docs/pt-BR/infrastructure.md) | [`docs/en/infrastructure.md`](docs/en/infrastructure.md) |
 | Tech stack | [`docs/pt-BR/tech-stack.md`](docs/pt-BR/tech-stack.md) | [`docs/en/tech-stack.md`](docs/en/tech-stack.md) |
 
 ## Required Deliverables (delivery checklist)
@@ -39,7 +40,7 @@ The assignment must be delivered in Portuguese (pt-BR) to the professor. This re
 5. [x] Software architecture description (architecture notebook).
 6. [x] User interface design (storyboards + wireframes).
 7. [x] Physical database design.
-8. [ ] System prototype + demo video.
-9. [ ] Deployment infrastructure description — in progress.
+8. [ ] System prototype + demo video — implementation starting next.
+9. [x] Deployment infrastructure description.
 
 > This README will be updated as artifacts are produced (each one becomes a card on the Kanban board).

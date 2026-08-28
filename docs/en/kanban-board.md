@@ -35,7 +35,7 @@ Each card records: **Name**, **Description**, **Owner** (always the author, solo
 | Architecture notebook | Architecture description (goals, assumptions, dependencies, decisions, mechanisms, abstractions, impact of Flask/SQLAlchemy/Jinja2) | author | High | M | Done | 2026-08-27 | 2026-08-28 |
 | Physical database design | Diagram + description of tables/columns/keys/relationships | author | High | M | Done | 2026-08-27 | 2026-08-28 |
 | User interface design (storyboards + wireframes) | One storyboard per key usage scenario; simple wireframes per screen | author | Medium | M | Done | 2026-08-27 | 2026-08-28 |
-| Flask project setup | Folder structure, dependencies, initial SQLite database, basic authentication | author | High | M | Backlog | 2026-08-27 | — |
+| Flask project setup | Folder structure, dependencies, initial SQLite database, basic authentication | author | High | M | In Progress | 2026-08-27 | — |
 | Implementation — Epic 1: Authentication (US-01 to US-04) | Account, login, access restriction, logout | author | High | M | Backlog | 2026-08-28 | — |
 | Implementation — Epic 2: Projects (US-05 to US-08) | Projects CRUD | author | High | M | Backlog | 2026-08-28 | — |
 | Implementation — Epic 3: Product Backlog (US-09, US-10) | Product Backlog CRUD (1 per project) | author | High | S | Backlog | 2026-08-28 | — |
@@ -46,7 +46,7 @@ Each card records: **Name**, **Description**, **Owner** (always the author, solo
 | Implementation — Epic 8: Estimation and Prioritization (US-28 to US-32) | Story points, MoSCoW, RICE + calculation and sorting | author | High | M | Backlog | 2026-08-28 | — |
 | Implementation — Epic 9: RBAC, Security, and Auditing (US-33 to US-38) | User/Administrator roles, encryption at rest, technical logging and audit log, admin dashboard | author | High | L | Backlog | 2026-08-28 | — |
 | Functional prototype + demo video | Recording covering one success scenario per service | author | High | M | Backlog | 2026-08-27 | — |
-| Deployment infrastructure description | Required hardware/software/services | author | Medium | S | In Progress | 2026-08-27 | — |
+| Deployment infrastructure description | Required hardware/software/services | author | Medium | S | Done | 2026-08-27 | 2026-08-28 |
 | Package the delivery (ZIP + unpack test) | Name `ESW-<student ID>.ZIP`, check integrity and no viruses | author | High | S | Backlog | 2026-08-27 | — |
 
 > Current WIP (In Progress column): **1/1** — within the limit. New cards are added to the Backlog as subtasks emerge (e.g., the 8 implementation cards above were born from breaking the user story backlog into epics, when that card was completed).
@@ -71,7 +71,9 @@ Each card records: **Name**, **Description**, **Owner** (always the author, solo
 | 2026-08-28 | User interface design (storyboards + wireframes) | Backlog → In Progress | Pulled next. |
 | 2026-08-28 | User interface design (storyboards + wireframes) | In Progress → Review → Done | 4 storyboards (signup/login, story+criteria, sprint planning, admin dashboard) with ASCII wireframes — checked against grading criterion 06. |
 | 2026-08-28 | Deployment infrastructure description | Backlog → In Progress | Pulled next — the last remaining "requirements/design" artifact before the prototype. |
+| 2026-08-28 | Deployment infrastructure description | In Progress → Review → Done | Hardware, software, services, environment variables, and deployment steps described — checked against grading criterion 09. All 7 documentation artifacts (criteria 01–07 and 09) are done; only the prototype (criterion 08) remains. |
+| 2026-08-28 | Flask project setup | Backlog → In Progress | Pulled next: the first implementation card, a prerequisite for all of Epics 1–9. |
 
 ## Recommended Next Step
 
-With the UI design done, the card in progress is the **Deployment infrastructure description**. After it, only the implementation cards (Epics 1–9) and the **Functional prototype + demo video** remain, which depend on code not yet written.
+All documentation/design artifacts (grading criteria 01–07 and 09) are done. The card in progress is **Flask project setup**, the first implementation step, followed by Epics 1–9 (in the order of the user story backlog) and finally the **Functional prototype + demo video**.
