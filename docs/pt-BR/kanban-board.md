@@ -22,31 +22,48 @@ Projeto individual, com um conjunto conhecido e finito de artefatos a entregar (
 
 Cada cartão registra: **Nome**, **Descrição**, **Responsável** (sempre o autor, projeto individual), **Prioridade** (Alta/Média/Baixa), **Estimativa** (P/M/G — pequeno/médio/grande, dado o escopo acadêmico), **Datas** (criação / conclusão).
 
-## Cartões Iniciais
+> **Este quadro é vivo**: seu estado (coluna "Status") reflete o progresso real do trabalho no momento da última atualização, e a seção "Histórico de Movimentação" abaixo registra cada transição de coluna com data — não é apenas uma descrição estática do processo, é a ferramenta efetivamente usada para gerenciar este projeto.
 
-| Nome | Descrição | Responsável | Prioridade | Estimativa | Status |
-|---|---|---|---|---|---|
-| Descrição do processo Kanban | Este documento (`kanban-board.md`) | autor | Alta | P | Em Progresso |
-| Documento de visão e escopo | `vision-and-scope.md` — problema, stakeholders, escopo | autor | Alta | P | A Fazer (rascunho já iniciado) |
-| Especificação de requisitos não funcionais | Documento formal de NFRs (usabilidade, segurança, portabilidade, etc.) | autor | Alta | M | Backlog |
-| Backlog de histórias de usuário (requisitos funcionais) | Épicos + histórias + critérios de aceitação cobrindo os 19 requisitos do enunciado | autor | Alta | G | Backlog |
-| Architecture notebook | Descrição da arquitetura (elementos, relacionamentos, impacto de Flask/SQLAlchemy/Jinja2) | autor | Alta | M | Backlog |
-| Projeto de interface (storyboards + wireframes) | Um storyboard por cenário-chave de uso; wireframes simples por tela | autor | Média | M | Backlog |
-| Projeto físico de banco de dados | Diagrama + descrição de tabelas/colunas/chaves/relacionamentos | autor | Alta | M | Backlog |
-| Setup do projeto Flask | Estrutura de pastas, dependências, banco SQLite inicial, autenticação básica | autor | Alta | M | Backlog |
-| CRUD de Projetos | Implementação da entidade Projeto | autor | Alta | M | Backlog |
-| CRUD de Product Backlog | Implementação (1 por projeto) | autor | Alta | M | Backlog |
-| CRUD de Sprint Backlogs | Implementação (N por projeto) | autor | Alta | M | Backlog |
-| CRUD de Histórias de Usuário + movimentação entre backlogs | Inclui formato Como/Quero/Para | autor | Alta | G | Backlog |
-| CRUD de Épicos + vínculo com histórias | | autor | Média | M | Backlog |
-| CRUD de Critérios de Aceitação | Formato Dado/Quando/Então | autor | Alta | M | Backlog |
-| Story points, MoSCoW e RICE | Campos + cálculo automático do score RICE | autor | Alta | M | Backlog |
-| Protótipo funcional + vídeo de demonstração | Gravação cobrindo um cenário de sucesso por serviço | autor | Alta | M | Backlog |
-| Descrição da infraestrutura de implantação | Hardware/software/serviços necessários | autor | Média | P | Backlog |
-| Empacotar entrega (ZIP + teste de descompactação) | Nome `ESW-<matrícula>.ZIP`, checar integridade e ausência de vírus | autor | Alta | P | Backlog |
+## Cartões
 
-> Este quadro evolui ao longo do trabalho — novos cartões são adicionados ao Backlog conforme subtarefas emergem (ex.: cada história de usuário do próprio sistema pode virar um cartão de implementação quando chegar sua vez).
+| Nome | Descrição | Responsável | Prioridade | Estimativa | Status | Criado em | Concluído em |
+|---|---|---|---|---|---|---|---|
+| Descrição do processo Kanban | Este documento (`kanban-board.md`) | autor | Alta | P | Concluído | 2026-08-27 | 2026-08-28 |
+| Documento de visão e escopo | `vision-and-scope.md` — problema, stakeholders, escopo | autor | Alta | P | Concluído | 2026-08-27 | 2026-08-28 |
+| Backlog de histórias de usuário (requisitos funcionais) | Épicos + histórias + critérios de aceitação cobrindo os 19 requisitos do enunciado | autor | Alta | G | Concluído | 2026-08-28 | 2026-08-28 |
+| Especificação de requisitos não funcionais | Documento formal de NFRs (usabilidade, segurança, portabilidade, normas etc.) | autor | Alta | M | Em Progresso | 2026-08-27 | — |
+| Architecture notebook | Descrição da arquitetura (objetivos, suposições, dependências, decisões, mecanismos, abstrações, impacto de Flask/SQLAlchemy/Jinja2) | autor | Alta | M | A Fazer | 2026-08-27 | — |
+| Projeto de interface (storyboards + wireframes) | Um storyboard por cenário-chave de uso; wireframes simples por tela | autor | Média | M | Backlog | 2026-08-27 | — |
+| Projeto físico de banco de dados | Diagrama + descrição de tabelas/colunas/chaves/relacionamentos | autor | Alta | M | Backlog | 2026-08-27 | — |
+| Setup do projeto Flask | Estrutura de pastas, dependências, banco SQLite inicial, autenticação básica | autor | Alta | M | Backlog | 2026-08-27 | — |
+| Implementação — Épico 1: Autenticação (US-01 a US-04) | Conta, login, restrição de acesso, logout | autor | Alta | M | Backlog | 2026-08-28 | — |
+| Implementação — Épico 2: Projetos (US-05 a US-08) | CRUD de Projetos | autor | Alta | M | Backlog | 2026-08-28 | — |
+| Implementação — Épico 3: Product Backlog (US-09, US-10) | CRUD de Product Backlog (1 por projeto) | autor | Alta | P | Backlog | 2026-08-28 | — |
+| Implementação — Épico 4: Sprint Backlogs (US-11 a US-14) | CRUD de Sprint Backlogs (N por projeto) | autor | Alta | M | Backlog | 2026-08-28 | — |
+| Implementação — Épico 5: Histórias de Usuário (US-15 a US-19) | CRUD + movimentação entre backlogs | autor | Alta | G | Backlog | 2026-08-28 | — |
+| Implementação — Épico 6: Épicos (US-20 a US-23) | CRUD de Épicos + vínculo com histórias | autor | Média | M | Backlog | 2026-08-28 | — |
+| Implementação — Épico 7: Critérios de Aceitação (US-24 a US-27) | CRUD, formato Dado/Quando/Então | autor | Alta | M | Backlog | 2026-08-28 | — |
+| Implementação — Épico 8: Estimativa e Priorização (US-28 a US-32) | Story points, MoSCoW, RICE + cálculo e ordenação | autor | Alta | M | Backlog | 2026-08-28 | — |
+| Implementação — Épico 9: RBAC, Segurança e Auditoria (US-33 a US-38) | Papéis Usuário/Administrador, criptografia em repouso, logging técnico e log de auditoria, painel do Administrador | autor | Alta | G | Backlog | 2026-08-28 | — |
+| Protótipo funcional + vídeo de demonstração | Gravação cobrindo um cenário de sucesso por serviço | autor | Alta | M | Backlog | 2026-08-27 | — |
+| Descrição da infraestrutura de implantação | Hardware/software/serviços necessários | autor | Média | P | Backlog | 2026-08-27 | — |
+| Empacotar entrega (ZIP + teste de descompactação) | Nome `ESW-<matrícula>.ZIP`, checar integridade e ausência de vírus | autor | Alta | P | Backlog | 2026-08-27 | — |
+
+> WIP atual (coluna Em Progresso): **1/1** — respeitando o limite. Novos cartões são adicionados ao Backlog conforme subtarefas emergem (ex.: os 8 cartões de implementação acima nasceram da quebra do Backlog de histórias de usuário em épicos, quando esse cartão foi concluído).
+
+## Histórico de Movimentação
+
+| Data | Cartão | De → Para | Observação |
+|---|---|---|---|
+| 2026-08-27 | Descrição do processo Kanban | Backlog → Em Progresso | Rascunho inicial do quadro. |
+| 2026-08-27 | Documento de visão e escopo | Backlog → A Fazer | Rascunho iniciado em paralelo. |
+| 2026-08-28 | Descrição do processo Kanban | Em Progresso → Em Revisão → Concluído | Estrutura de colunas/cartões validada contra os critérios de avaliação (item 01 do enunciado). |
+| 2026-08-28 | Documento de visão e escopo | A Fazer → Em Progresso → Em Revisão → Concluído | Removida marcação de rascunho; conteúdo já cobria os pontos do critério de avaliação (item 02). |
+| 2026-08-28 | Backlog de histórias de usuário | Backlog → Em Progresso → Em Revisão → Concluído | 32 histórias em 8 épicos escritas cobrindo os 19 requisitos; tabela de rastreabilidade conferida linha a linha. |
+| 2026-08-28 | Especificação de requisitos não funcionais | Backlog → A Fazer → Em Progresso | Puxado para próximo, já que é o único artefato de "requisitos" ainda pendente e é pré-requisito conceitual da arquitetura. |
+| 2026-08-28 | Implementação — Épicos 1 a 8 | (criados diretamente no Backlog) | Cartões de implementação derivados da quebra do backlog de histórias de usuário em épicos. |
+| 2026-08-28 | Escopo: RBAC/segurança/logging | Fora de Escopo → Dentro do Escopo | Decisão do autor de tornar papéis (Usuário/Administrador) um controle de acesso real, com criptografia em repouso e logging/auditoria — atualizado em `vision-and-scope.md`, `tech-stack.md`; gerou o cartão "Implementação — Épico 9" e 6 novas histórias (US-33 a US-38) no backlog de histórias. |
 
 ## Próximo Passo Recomendado
 
-Com o quadro criado, o próximo cartão a puxar para "Em Progresso" é o **Documento de visão e escopo** (já rascunhado em `vision-and-scope.md`) e, em paralelo/logo a seguir, o **Backlog de histórias de usuário** — que é o maior artefato e a base para todo o resto (arquitetura, UI, banco de dados derivam dele).
+Com o backlog de histórias de usuário concluído, o cartão em progresso é a **Especificação de requisitos não funcionais** — pré-requisito natural do **Architecture notebook** (próximo da fila em "A Fazer"), já que decisões de arquitetura respondem a requisitos não funcionais (desempenho, segurança, portabilidade etc.).

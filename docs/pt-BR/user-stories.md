@@ -276,12 +276,63 @@ Como **PO**, eu quero ordenar as histórias de um backlog por pontuação RICE (
 
 **Story Points**: 3 · **MoSCoW**: C · **RICE**: R=90, I=1, C=80%, E=3 → **24**
 
+## Épico 9 — RBAC, Segurança e Auditoria
+
+*Amplia o escopo original (ver `vision-and-scope.md` § Controle de Acesso por Papéis); não deriva de um requisito numerado do enunciado, mas do requisito adicional decidido pelo autor.*
+
+### US-33 — Atribuir papel de Administrador
+Como **Administrador**, eu quero que exista um papel `admin` distinto do papel `user` padrão, para que apenas contas designadas tenham acesso ao monitoramento do sistema.
+
+- **Critério de aceitação 1**: Dado que uma conta tem papel `user`, quando ela tenta acessar uma rota exclusiva de Administrador, então recebe erro de acesso negado (403).
+- **Critério de aceitação 2**: Dado que a aplicação é executada pela primeira vez, quando a conta administradora inicial é definida via variável de ambiente/seed, então essa conta passa a ter papel `admin`.
+
+**Story Points**: 3 · **MoSCoW**: M · **RICE**: R=1, I=2, C=100%, E=3 → **1**
+
+### US-34 — Painel do Administrador: usuários e projetos
+Como **Administrador**, eu quero ver a lista de todos os usuários e todos os projetos do sistema, para monitorar o uso geral da aplicação.
+
+- **Critério de aceitação**: Dado que estou autenticado como Administrador, quando acesso o painel de administração, então vejo a lista completa de usuários (e-mail, data de criação) e de projetos (nome, dono, data de criação), sem poder editar o conteúdo de projetos alheios.
+
+**Story Points**: 3 · **MoSCoW**: M · **RICE**: R=1, I=2, C=90%, E=3 → **1**
+
+### US-35 — Log de auditoria de ações
+Como **Administrador**, eu quero que toda criação, edição e exclusão de entidades (e login/logout/falha de login) gere um registro de auditoria, para poder investigar o que aconteceu no sistema.
+
+- **Critério de aceitação 1**: Dado que uma entidade (projeto, backlog, história, épico, critério) é criada, editada ou excluída, quando a operação é concluída, então um registro é gravado com: usuário responsável, ação, entidade afetada e timestamp.
+- **Critério de aceitação 2**: Dado que uma tentativa de login falha, quando isso ocorre, então um registro de auditoria é gravado com o e-mail tentado e o timestamp (sem gravar a senha).
+
+**Story Points**: 5 · **MoSCoW**: M · **RICE**: R=1, I=3, C=90%, E=5 → **1**
+
+### US-36 — Visualizar log de auditoria
+Como **Administrador**, eu quero visualizar e filtrar o log de auditoria (por usuário, tipo de ação, período), para investigar incidentes ou uso indevido.
+
+- **Critério de aceitação**: Dado que existem registros de auditoria, quando acesso a tela de logs como Administrador e aplico um filtro, então vejo apenas os registros que correspondem ao filtro, ordenados do mais recente para o mais antigo.
+
+**Story Points**: 3 · **MoSCoW**: S · **RICE**: R=1, I=1, C=80%, E=3 → **0.3**
+
+### US-37 — Sessão e senha seguras
+Como **usuário**, eu quero que minha senha seja armazenada com hash forte e minha sessão protegida por cookies seguros, para que minha conta não seja facilmente comprometida.
+
+- **Critério de aceitação 1**: Dado que crio ou altero minha senha, quando ela é persistida, então é armazenada como hash Argon2 (nunca em texto puro, nunca reversível).
+- **Critério de aceitação 2**: Dado que estou autenticado, quando inspeciono o cookie de sessão, então ele tem os atributos `HttpOnly`, `Secure` (em produção) e `SameSite=Lax` (ou mais restritivo).
+- **Critério de aceitação 3**: Dado que envio um formulário sem o token CSRF válido, quando o servidor processa a requisição, então ela é rejeitada.
+
+**Story Points**: 5 · **MoSCoW**: M · **RICE**: R=100, I=3, C=100%, E=5 → **60**
+
+### US-38 — Criptografia de dados sensíveis em repouso
+Como **usuário**, eu quero que campos marcados como sensíveis (ex.: notas privadas de projeto, se existirem) sejam cifrados no banco de dados, para que um vazamento do arquivo SQLite não exponha esses dados em texto claro.
+
+- **Critério de aceitação 1**: Dado que um campo é marcado como sensível no modelo de dados, quando ele é gravado no banco, então seu valor é cifrado (Fernet/AES) e não aparece em texto claro em uma inspeção direta do arquivo `.sqlite3`.
+- **Critério de aceitação 2**: Dado que o campo é lido de volta pela aplicação, quando exibido ao usuário autorizado, então aparece decifrado normalmente.
+
+**Story Points**: 5 · **MoSCoW**: S · **RICE**: R=60, I=1, C=70%, E=5 → **8**
+
 ## Resumo por Prioridade MoSCoW
 
 | MoSCoW | Histórias |
 |---|---|
-| **Must (M)** | US-01, US-02, US-03, US-05, US-06, US-09, US-11, US-12, US-15, US-16, US-19, US-24, US-25, US-28, US-29, US-30, US-31 |
-| **Should (S)** | US-04, US-07, US-08, US-13, US-14, US-17, US-18, US-20, US-21, US-23, US-26, US-27 |
+| **Must (M)** | US-01, US-02, US-03, US-05, US-06, US-09, US-11, US-12, US-15, US-16, US-19, US-24, US-25, US-28, US-29, US-30, US-31, US-33, US-34, US-35, US-37 |
+| **Should (S)** | US-04, US-07, US-08, US-13, US-14, US-17, US-18, US-20, US-21, US-23, US-26, US-27, US-36, US-38 |
 | **Could (C)** | US-10, US-22, US-32 |
 | **Won't (this release)** | — (nenhuma identificada fora do escopo do MVP descrito em `vision-and-scope.md`) |
 
@@ -305,3 +356,4 @@ Como **PO**, eu quero ordenar as histórias de um backlog por pontuação RICE (
 | (16) Etiqueta MoSCoW | US-29 |
 | (17), (18) Critérios RICE | US-30 |
 | (19) Cálculo da pontuação RICE | US-31 |
+| Requisito adicional: RBAC, segurança e auditoria (decisão do autor, não numerado no enunciado) | US-33 a US-38 |

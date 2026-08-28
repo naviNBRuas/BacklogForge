@@ -276,12 +276,63 @@ As a **PO**, I want to sort a backlog's stories by RICE score (or by MoSCoW labe
 
 **Story Points**: 3 · **MoSCoW**: C · **RICE**: R=90, I=1, C=80%, E=3 → **24**
 
+## Epic 9 — RBAC, Security, and Auditing
+
+*Extends the original scope (see `vision-and-scope.md` § Role-Based Access Control); doesn't derive from a numbered assignment requirement, but from an additional requirement the author decided to add.*
+
+### US-33 — Assign the Administrator role
+As an **Administrator**, I want a distinct `admin` role separate from the default `user` role, so that only designated accounts get access to system monitoring.
+
+- **Acceptance criterion 1**: Given an account has the `user` role, when it tries to access an Administrator-only route, then it gets an access-denied error (403).
+- **Acceptance criterion 2**: Given the application runs for the first time, when the initial administrator account is set via environment variable/seed, then that account gets the `admin` role.
+
+**Story Points**: 3 · **MoSCoW**: M · **RICE**: R=1, I=2, C=100%, E=3 → **1**
+
+### US-34 — Admin dashboard: users and projects
+As an **Administrator**, I want to see the list of all users and all projects in the system, so that I can monitor overall application usage.
+
+- **Acceptance criterion**: Given I'm authenticated as an Administrator, when I access the admin dashboard, then I see the full list of users (email, creation date) and projects (name, owner, creation date), without being able to edit other users' project content.
+
+**Story Points**: 3 · **MoSCoW**: M · **RICE**: R=1, I=2, C=90%, E=3 → **1**
+
+### US-35 — Audit log of actions
+As an **Administrator**, I want every entity creation, edit, and deletion (and login/logout/failed login) to generate an audit record, so that I can investigate what happened in the system.
+
+- **Acceptance criterion 1**: Given an entity (project, backlog, story, epic, criterion) is created, edited, or deleted, when the operation completes, then a record is stored with: responsible user, action, affected entity, and timestamp.
+- **Acceptance criterion 2**: Given a login attempt fails, when that happens, then an audit record is stored with the attempted email and timestamp (without storing the password).
+
+**Story Points**: 5 · **MoSCoW**: M · **RICE**: R=1, I=3, C=90%, E=5 → **1**
+
+### US-36 — View the audit log
+As an **Administrator**, I want to view and filter the audit log (by user, action type, period), so that I can investigate incidents or misuse.
+
+- **Acceptance criterion**: Given audit records exist, when I access the logs screen as Administrator and apply a filter, then I see only records matching the filter, ordered from most recent to oldest.
+
+**Story Points**: 3 · **MoSCoW**: S · **RICE**: R=1, I=1, C=80%, E=3 → **0.3**
+
+### US-37 — Secure session and password
+As a **user**, I want my password stored with strong hashing and my session protected by secure cookies, so that my account isn't easily compromised.
+
+- **Acceptance criterion 1**: Given I create or change my password, when it's persisted, then it's stored as an Argon2 hash (never in plain text, never reversible).
+- **Acceptance criterion 2**: Given I'm authenticated, when I inspect the session cookie, then it has the `HttpOnly`, `Secure` (in production), and `SameSite=Lax` (or stricter) attributes.
+- **Acceptance criterion 3**: Given I submit a form without a valid CSRF token, when the server processes the request, then it's rejected.
+
+**Story Points**: 5 · **MoSCoW**: M · **RICE**: R=100, I=3, C=100%, E=5 → **60**
+
+### US-38 — Encrypt sensitive data at rest
+As a **user**, I want fields marked as sensitive (e.g., private project notes, if any) to be encrypted in the database, so that a leak of the SQLite file doesn't expose that data in plain text.
+
+- **Acceptance criterion 1**: Given a field is marked sensitive in the data model, when it's written to the database, then its value is encrypted (Fernet/AES) and doesn't appear in plain text under direct inspection of the `.sqlite3` file.
+- **Acceptance criterion 2**: Given the field is read back by the application, when shown to an authorized user, then it appears normally decrypted.
+
+**Story Points**: 5 · **MoSCoW**: S · **RICE**: R=60, I=1, C=70%, E=5 → **8**
+
 ## Summary by MoSCoW Priority
 
 | MoSCoW | Stories |
 |---|---|
-| **Must (M)** | US-01, US-02, US-03, US-05, US-06, US-09, US-11, US-12, US-15, US-16, US-19, US-24, US-25, US-28, US-29, US-30, US-31 |
-| **Should (S)** | US-04, US-07, US-08, US-13, US-14, US-17, US-18, US-20, US-21, US-23, US-26, US-27 |
+| **Must (M)** | US-01, US-02, US-03, US-05, US-06, US-09, US-11, US-12, US-15, US-16, US-19, US-24, US-25, US-28, US-29, US-30, US-31, US-33, US-34, US-35, US-37 |
+| **Should (S)** | US-04, US-07, US-08, US-13, US-14, US-17, US-18, US-20, US-21, US-23, US-26, US-27, US-36, US-38 |
 | **Could (C)** | US-10, US-22, US-32 |
 | **Won't (this release)** | — (none identified beyond the MVP scope described in `vision-and-scope.md`) |
 
@@ -305,3 +356,4 @@ As a **PO**, I want to sort a backlog's stories by RICE score (or by MoSCoW labe
 | (16) MoSCoW label | US-29 |
 | (17), (18) RICE criteria | US-30 |
 | (19) RICE score calculation | US-31 |
+| Additional requirement: RBAC, security, and auditing (author's decision, not numbered in the assignment) | US-33 to US-38 |

@@ -22,31 +22,48 @@ Solo project, with a known and finite set of artifacts to deliver (see `README.m
 
 Each card records: **Name**, **Description**, **Owner** (always the author, solo project), **Priority** (High/Medium/Low), **Estimate** (S/M/L — small/medium/large, given the academic scope), **Dates** (created / completed).
 
-## Initial Cards
+> **This board is live**: its state (the "Status" column) reflects real progress as of the last update, and the "Movement History" section below logs every column transition with a date — this isn't just a static description of the process, it's the tool actually used to manage this project.
 
-| Name | Description | Owner | Priority | Estimate | Status |
-|---|---|---|---|---|---|
-| Kanban process description | This document (`kanban-board.md`) | author | High | S | In Progress |
-| Vision and scope document | `vision-and-scope.md` — problem, stakeholders, scope | author | High | S | To Do (draft already started) |
-| Non-functional requirements specification | Formal NFR document (usability, security, portability, etc.) | author | High | M | Backlog |
-| User story backlog (functional requirements) | Epics + stories + acceptance criteria covering the 19 requirements in the assignment | author | High | L | Backlog |
-| Architecture notebook | Architecture description (elements, relationships, impact of Flask/SQLAlchemy/Jinja2) | author | High | M | Backlog |
-| User interface design (storyboards + wireframes) | One storyboard per key usage scenario; simple wireframes per screen | author | Medium | M | Backlog |
-| Physical database design | Diagram + description of tables/columns/keys/relationships | author | High | M | Backlog |
-| Flask project setup | Folder structure, dependencies, initial SQLite database, basic authentication | author | High | M | Backlog |
-| Projects CRUD | Implementation of the Project entity | author | High | M | Backlog |
-| Product Backlog CRUD | Implementation (1 per project) | author | High | M | Backlog |
-| Sprint Backlogs CRUD | Implementation (N per project) | author | High | M | Backlog |
-| User Stories CRUD + moving between backlogs | Includes As/I want/So that format | author | High | L | Backlog |
-| Epics CRUD + linking to stories | | author | Medium | M | Backlog |
-| Acceptance Criteria CRUD | Given/When/Then format | author | High | M | Backlog |
-| Story points, MoSCoW and RICE | Fields + automatic RICE score calculation | author | High | M | Backlog |
-| Functional prototype + demo video | Recording covering one success scenario per service | author | High | M | Backlog |
-| Deployment infrastructure description | Required hardware/software/services | author | Medium | S | Backlog |
-| Package the delivery (ZIP + unpack test) | Name `ESW-<student ID>.ZIP`, check integrity and no viruses | author | High | S | Backlog |
+## Cards
 
-> This board evolves throughout the work — new cards are added to the Backlog as subtasks emerge (e.g., each user story of the system itself can become an implementation card when its turn comes).
+| Name | Description | Owner | Priority | Estimate | Status | Created | Completed |
+|---|---|---|---|---|---|---|---|
+| Kanban process description | This document (`kanban-board.md`) | author | High | S | Done | 2026-08-27 | 2026-08-28 |
+| Vision and scope document | `vision-and-scope.md` — problem, stakeholders, scope | author | High | S | Done | 2026-08-27 | 2026-08-28 |
+| User story backlog (functional requirements) | Epics + stories + acceptance criteria covering the 19 requirements in the assignment | author | High | L | Done | 2026-08-28 | 2026-08-28 |
+| Non-functional requirements specification | Formal NFR document (usability, security, portability, standards, etc.) | author | High | M | In Progress | 2026-08-27 | — |
+| Architecture notebook | Architecture description (goals, assumptions, dependencies, decisions, mechanisms, abstractions, impact of Flask/SQLAlchemy/Jinja2) | author | High | M | To Do | 2026-08-27 | — |
+| User interface design (storyboards + wireframes) | One storyboard per key usage scenario; simple wireframes per screen | author | Medium | M | Backlog | 2026-08-27 | — |
+| Physical database design | Diagram + description of tables/columns/keys/relationships | author | High | M | Backlog | 2026-08-27 | — |
+| Flask project setup | Folder structure, dependencies, initial SQLite database, basic authentication | author | High | M | Backlog | 2026-08-27 | — |
+| Implementation — Epic 1: Authentication (US-01 to US-04) | Account, login, access restriction, logout | author | High | M | Backlog | 2026-08-28 | — |
+| Implementation — Epic 2: Projects (US-05 to US-08) | Projects CRUD | author | High | M | Backlog | 2026-08-28 | — |
+| Implementation — Epic 3: Product Backlog (US-09, US-10) | Product Backlog CRUD (1 per project) | author | High | S | Backlog | 2026-08-28 | — |
+| Implementation — Epic 4: Sprint Backlogs (US-11 to US-14) | Sprint Backlogs CRUD (N per project) | author | High | M | Backlog | 2026-08-28 | — |
+| Implementation — Epic 5: User Stories (US-15 to US-19) | CRUD + moving between backlogs | author | High | L | Backlog | 2026-08-28 | — |
+| Implementation — Epic 6: Epics (US-20 to US-23) | Epics CRUD + linking to stories | author | Medium | M | Backlog | 2026-08-28 | — |
+| Implementation — Epic 7: Acceptance Criteria (US-24 to US-27) | CRUD, Given/When/Then format | author | High | M | Backlog | 2026-08-28 | — |
+| Implementation — Epic 8: Estimation and Prioritization (US-28 to US-32) | Story points, MoSCoW, RICE + calculation and sorting | author | High | M | Backlog | 2026-08-28 | — |
+| Implementation — Epic 9: RBAC, Security, and Auditing (US-33 to US-38) | User/Administrator roles, encryption at rest, technical logging and audit log, admin dashboard | author | High | L | Backlog | 2026-08-28 | — |
+| Functional prototype + demo video | Recording covering one success scenario per service | author | High | M | Backlog | 2026-08-27 | — |
+| Deployment infrastructure description | Required hardware/software/services | author | Medium | S | Backlog | 2026-08-27 | — |
+| Package the delivery (ZIP + unpack test) | Name `ESW-<student ID>.ZIP`, check integrity and no viruses | author | High | S | Backlog | 2026-08-27 | — |
+
+> Current WIP (In Progress column): **1/1** — within the limit. New cards are added to the Backlog as subtasks emerge (e.g., the 8 implementation cards above were born from breaking the user story backlog into epics, when that card was completed).
+
+## Movement History
+
+| Date | Card | From → To | Note |
+|---|---|---|---|
+| 2026-08-27 | Kanban process description | Backlog → In Progress | Initial board draft. |
+| 2026-08-27 | Vision and scope document | Backlog → To Do | Draft started in parallel. |
+| 2026-08-28 | Kanban process description | In Progress → Review → Done | Column/card structure validated against the grading criteria (assignment item 01). |
+| 2026-08-28 | Vision and scope document | To Do → In Progress → Review → Done | Draft framing removed; content already covered the grading criterion's points (item 02). |
+| 2026-08-28 | User story backlog | Backlog → In Progress → Review → Done | 32 stories across 8 epics written covering the 19 requirements; traceability table checked row by row. |
+| 2026-08-28 | Non-functional requirements specification | Backlog → To Do → In Progress | Pulled next, since it's the only remaining "requirements" artifact and is a conceptual prerequisite of the architecture. |
+| 2026-08-28 | Implementation — Epics 1 to 8 | (created directly in Backlog) | Implementation cards derived from breaking the user story backlog into epics. |
+| 2026-08-28 | Scope: RBAC/security/logging | Out of Scope → In Scope | Author's decision to make roles (User/Administrator) a real access control mechanism, with encryption at rest and logging/auditing — updated in `vision-and-scope.md`, `tech-stack.md`; produced the "Implementation — Epic 9" card and 6 new stories (US-33 to US-38) in the user story backlog. |
 
 ## Recommended Next Step
 
-With the board created, the next card to pull into "In Progress" is the **Vision and scope document** (already drafted in `vision-and-scope.md`) and, in parallel or shortly after, the **user story backlog** — the largest artifact and the foundation for everything else (architecture, UI, and database all derive from it).
+With the user story backlog done, the card in progress is the **Non-functional requirements specification** — a natural prerequisite of the **Architecture notebook** (next up in "To Do"), since architectural decisions respond to non-functional requirements (performance, security, portability, etc.).
