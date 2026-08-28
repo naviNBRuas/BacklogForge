@@ -34,7 +34,7 @@ Cada cartão registra: **Nome**, **Descrição**, **Responsável** (sempre o aut
 | Especificação de requisitos não funcionais | Documento formal de NFRs (usabilidade, segurança, portabilidade, normas etc.) | autor | Alta | M | Concluído | 2026-08-27 | 2026-08-28 |
 | Architecture notebook | Descrição da arquitetura (objetivos, suposições, dependências, decisões, mecanismos, abstrações, impacto de Flask/SQLAlchemy/Jinja2) | autor | Alta | M | Concluído | 2026-08-27 | 2026-08-28 |
 | Projeto físico de banco de dados | Diagrama + descrição de tabelas/colunas/chaves/relacionamentos | autor | Alta | M | Concluído | 2026-08-27 | 2026-08-28 |
-| Projeto de interface (storyboards + wireframes) | Um storyboard por cenário-chave de uso; wireframes simples por tela | autor | Média | M | Em Progresso | 2026-08-27 | — |
+| Projeto de interface (storyboards + wireframes) | Um storyboard por cenário-chave de uso; wireframes simples por tela | autor | Média | M | Concluído | 2026-08-27 | 2026-08-28 |
 | Setup do projeto Flask | Estrutura de pastas, dependências, banco SQLite inicial, autenticação básica | autor | Alta | M | Backlog | 2026-08-27 | — |
 | Implementação — Épico 1: Autenticação (US-01 a US-04) | Conta, login, restrição de acesso, logout | autor | Alta | M | Backlog | 2026-08-28 | — |
 | Implementação — Épico 2: Projetos (US-05 a US-08) | CRUD de Projetos | autor | Alta | M | Backlog | 2026-08-28 | — |
@@ -46,7 +46,7 @@ Cada cartão registra: **Nome**, **Descrição**, **Responsável** (sempre o aut
 | Implementação — Épico 8: Estimativa e Priorização (US-28 a US-32) | Story points, MoSCoW, RICE + cálculo e ordenação | autor | Alta | M | Backlog | 2026-08-28 | — |
 | Implementação — Épico 9: RBAC, Segurança e Auditoria (US-33 a US-38) | Papéis Usuário/Administrador, criptografia em repouso, logging técnico e log de auditoria, painel do Administrador | autor | Alta | G | Backlog | 2026-08-28 | — |
 | Protótipo funcional + vídeo de demonstração | Gravação cobrindo um cenário de sucesso por serviço | autor | Alta | M | Backlog | 2026-08-27 | — |
-| Descrição da infraestrutura de implantação | Hardware/software/serviços necessários | autor | Média | P | Backlog | 2026-08-27 | — |
+| Descrição da infraestrutura de implantação | Hardware/software/serviços necessários | autor | Média | P | Em Progresso | 2026-08-27 | — |
 | Empacotar entrega (ZIP + teste de descompactação) | Nome `ESW-<matrícula>.ZIP`, checar integridade e ausência de vírus | autor | Alta | P | Backlog | 2026-08-27 | — |
 
 > WIP atual (coluna Em Progresso): **1/1** — respeitando o limite. Novos cartões são adicionados ao Backlog conforme subtarefas emergem (ex.: os 8 cartões de implementação acima nasceram da quebra do Backlog de histórias de usuário em épicos, quando esse cartão foi concluído).
@@ -69,7 +69,9 @@ Cada cartão registra: **Nome**, **Descrição**, **Responsável** (sempre o aut
 | 2026-08-28 | Projeto físico de banco de dados | Backlog → A Fazer → Em Progresso | Puxado para próximo: as entidades e relacionamentos já definidos na seção 7 do Architecture notebook são a base direta do schema físico. |
 | 2026-08-28 | Projeto físico de banco de dados | Em Progresso → Em Revisão → Concluído | Diagrama ER (mermaid) + 7 tabelas descritas (nome, colunas, chaves, relacionamentos, propósito) — conferido contra o critério de avaliação 07. |
 | 2026-08-28 | Projeto de interface (storyboards + wireframes) | Backlog → Em Progresso | Puxado para próximo. |
+| 2026-08-28 | Projeto de interface (storyboards + wireframes) | Em Progresso → Em Revisão → Concluído | 4 storyboards (cadastro/login, história+critérios, planejamento de sprint, painel do admin) com wireframes ASCII — conferido contra o critério de avaliação 06. |
+| 2026-08-28 | Descrição da infraestrutura de implantação | Backlog → Em Progresso | Puxado para próximo — único artefato de "requisitos/design" restante antes do protótipo. |
 
 ## Próximo Passo Recomendado
 
-Com o projeto físico de banco de dados concluído, o cartão em progresso é o **Projeto de interface (storyboards + wireframes)** — os CRUDs de cada entidade já modelada viram as telas a esboçar.
+Com o projeto de interface concluído, o cartão em progresso é a **Descrição da infraestrutura de implantação**. Depois dela, restam apenas os cartões de implementação (Épicos 1–9) e o **Protótipo funcional + vídeo de demonstração**, que dependem do código ainda não escrito.
