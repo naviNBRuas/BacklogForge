@@ -32,9 +32,9 @@ Each card records: **Name**, **Description**, **Owner** (always the author, solo
 | Vision and scope document | `vision-and-scope.md` — problem, stakeholders, scope | author | High | S | Done | 2026-08-27 | 2026-08-28 |
 | User story backlog (functional requirements) | Epics + stories + acceptance criteria covering the 19 requirements in the assignment | author | High | L | Done | 2026-08-28 | 2026-08-28 |
 | Non-functional requirements specification | Formal NFR document (usability, security, portability, standards, etc.) | author | High | M | Done | 2026-08-27 | 2026-08-28 |
-| Architecture notebook | Architecture description (goals, assumptions, dependencies, decisions, mechanisms, abstractions, impact of Flask/SQLAlchemy/Jinja2) | author | High | M | In Progress | 2026-08-27 | — |
+| Architecture notebook | Architecture description (goals, assumptions, dependencies, decisions, mechanisms, abstractions, impact of Flask/SQLAlchemy/Jinja2) | author | High | M | Done | 2026-08-27 | 2026-08-28 |
+| Physical database design | Diagram + description of tables/columns/keys/relationships | author | High | M | In Progress | 2026-08-27 | — |
 | User interface design (storyboards + wireframes) | One storyboard per key usage scenario; simple wireframes per screen | author | Medium | M | Backlog | 2026-08-27 | — |
-| Physical database design | Diagram + description of tables/columns/keys/relationships | author | High | M | Backlog | 2026-08-27 | — |
 | Flask project setup | Folder structure, dependencies, initial SQLite database, basic authentication | author | High | M | Backlog | 2026-08-27 | — |
 | Implementation — Epic 1: Authentication (US-01 to US-04) | Account, login, access restriction, logout | author | High | M | Backlog | 2026-08-28 | — |
 | Implementation — Epic 2: Projects (US-05 to US-08) | Projects CRUD | author | High | M | Backlog | 2026-08-28 | — |
@@ -65,7 +65,9 @@ Each card records: **Name**, **Description**, **Owner** (always the author, solo
 | 2026-08-28 | Scope: RBAC/security/logging | Out of Scope → In Scope | Author's decision to make roles (User/Administrator) a real access control mechanism, with encryption at rest and logging/auditing — updated in `vision-and-scope.md`, `tech-stack.md`; produced the "Implementation — Epic 9" card and 6 new stories (US-33 to US-38) in the user story backlog. |
 | 2026-08-28 | Non-functional requirements specification | In Progress → Review → Done | Document covers quality attributes, security (RBAC, encryption, session), interfaces, compliance (OWASP), constraints, licensing, and documentation — checked against grading criterion 03. |
 | 2026-08-28 | Architecture notebook | To Do → In Progress | Pulled next: the security/RBAC decisions from the NFR doc (previous item) are a direct prerequisite for the architecture mechanisms to be described here. |
+| 2026-08-28 | Architecture notebook | In Progress → Review → Done | Document covers goals, assumptions, dependencies, decisions/constraints, mechanisms, abstractions, perspectives, and tool impact — checked against grading criterion 05. |
+| 2026-08-28 | Physical database design | Backlog → To Do → In Progress | Pulled next: the entities and relationships already defined in the notebook's section 7 are the direct basis for the physical schema. |
 
 ## Recommended Next Step
 
-With the NFR specification done, the card in progress is the **Architecture notebook** — with the security/RBAC/logging requirements (NFR section 3) and the user story backlog as direct input for architecture elements, mechanisms, and decisions.
+With the Architecture notebook done, the card in progress is the **Physical database design** — the entities/relationships from the notebook's section 7 map directly to tables, columns, and keys.

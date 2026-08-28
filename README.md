@@ -25,6 +25,7 @@ The assignment must be delivered in Portuguese (pt-BR) to the professor. This re
 | Vision and scope | [`docs/pt-BR/vision-and-scope.md`](docs/pt-BR/vision-and-scope.md) | [`docs/en/vision-and-scope.md`](docs/en/vision-and-scope.md) |
 | Non-functional requirements | [`docs/pt-BR/non-functional-requirements.md`](docs/pt-BR/non-functional-requirements.md) | [`docs/en/non-functional-requirements.md`](docs/en/non-functional-requirements.md) |
 | User story backlog | [`docs/pt-BR/user-stories.md`](docs/pt-BR/user-stories.md) | [`docs/en/user-stories.md`](docs/en/user-stories.md) |
+| Architecture notebook | [`docs/pt-BR/architecture-notebook.md`](docs/pt-BR/architecture-notebook.md) | [`docs/en/architecture-notebook.md`](docs/en/architecture-notebook.md) |
 | Tech stack | [`docs/pt-BR/tech-stack.md`](docs/pt-BR/tech-stack.md) | [`docs/en/tech-stack.md`](docs/en/tech-stack.md) |
 
 ## Required Deliverables (delivery checklist)
@@ -33,9 +34,9 @@ The assignment must be delivered in Portuguese (pt-BR) to the professor. This re
 2. [x] Vision and scope document.
 3. [x] Non-functional requirements specification (system-wide requirements).
 4. [x] Functional requirements specification via user stories.
-5. [ ] Software architecture description (architecture notebook) — in progress.
+5. [x] Software architecture description (architecture notebook).
 6. [ ] User interface design (storyboards + wireframes).
-7. [ ] Physical database design.
+7. [ ] Physical database design — in progress.
 8. [ ] System prototype + demo video.
 9. [ ] Deployment infrastructure description.
 
